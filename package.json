@@ -1,0 +1,26 @@
+{
+    "name": "youtube-tv-electron",
+    "version": "1.0.0",
+    "description": "Cliente de YouTube TV sencillo para escritorio basado en electron.",
+    "main": "main.js",
+    "dependencies": {},
+    "devDependencies": {
+        "electron": "^9.2.0",
+        "electron-packager": "^15.0.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "buildWin64": "electron-packager ./ \"YouTube TV\" --asar --platform=win32 --arch=x64 --icon=./build/icons/icon.ico",
+        "buildWin32": "electron-packager ./ \"YouTube TV\" --asar --platform=win32 --arch=ia32 --icon=./build/icons/icon.ico",
+        "buildWinARM": "electron-packager ./ \"YouTube TV\" --asar --platform=win32 --arch=arm64 --icon=./build/icons/icon.ico",
+        "buildLinux64": "electron-packager ./ \"YouTube TV\" --asar --platform=linux --arch=x64 --icon=./build/icons/icon.ico",
+        "buildLinux32": "electron-packager ./ \"YouTube TV\" --asar --platform=linux --arch=ia32 --icon=./build/icons/icon.ico",
+        "buildLinuxARM64": "electron-packager ./ \"YouTube TV\" --asar --platform=linux --arch=arm64 --icon=./build/icons/icon.ico",
+        "buildLinuxARMv7": "electron-packager ./ \"YouTube TV\" --asar --platform=linux --arch=armv7l --icon=./build/icons/icon.ico",
+        "buildmOS64": "electron-packager ./ \"YouTube TV\" --asar --platform=darwin --arch=x64 --icon=./build/icons/icon.icns",
+        "buildAll": "electron-packager ./ \"YouTube TV\" --asar --all --icon=./build/icons/icon.ico"
+    },
+    "author": "Marcos Rodríguez",
+    "license": "CC-BY-NC-SA"
+}
