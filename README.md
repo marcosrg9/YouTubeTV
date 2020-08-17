@@ -112,21 +112,21 @@ No comprobado en Windows ARM, Linux ARM y macOS
 ## 📦 Builds
 El proyecto se puede descargar compilado y listo para su uso.
 ### Windows
-[YouTube TV-win32-ia32.zip]()
+[YouTube TV-win32-ia32.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-ia32.zip)
 
-[YouTube TV-win32-x64.zip]()
+[YouTube TV-win32-x64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-x64.zip)
 
-[YouTube TV-win32-arm64.zip]()
+[YouTube TV-win32-arm64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-arm64.zip)
 
 ### Linux
 
-[YouTube TV-linux-ia32.zip]()
+[YouTube TV-linux-ia32.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-ia32.zip)
 
-[YouTube TV-linux-x64.zip]()
+[YouTube TV-linux-x64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-x64.zip)
 
-[YouTube TV-linux-arm64.zip]()
+[YouTube TV-linux-arm64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-arm64.zip)
 
-[YouTube TV-linux-armv7l.zip]()
+[YouTube TV-linux-armv7l.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-armv7l.zip)
 
 
 **Licencia Creative Commons**
