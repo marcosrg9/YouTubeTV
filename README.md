@@ -128,6 +128,11 @@ El proyecto se puede descargar compilado y listo para su uso.
 
 [YouTube TV-linux-armv7l.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-armv7l.zip)
 
+## 💿 Instaladores
+
+[YouTube TV-win32-x86.msi](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-x86.msi)
+
+[YouTube TV-win32-x64.msi](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-x64.msi)
 
 **Licencia Creative Commons**
 
