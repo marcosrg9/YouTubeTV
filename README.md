@@ -96,43 +96,25 @@ let win = new BrowserWindow({
 ```
 Sin embargo forzar este modo impide cambiar a otras ventanas de forma sencilla.
 
-## ⛔ Problemas conocidos
-- Al minimizar la ventana, la reproducción se detiene. Se puede reanudar si hay un teléfono enlazado pulsando el botón de reproducir desde la app de YouTube.
+## ⛔ Problemas conocidos (menores)
+- Al minimizar la ventana, la reproducción se detiene. Se puede reanudar si hay un dispositivo enlazado pulsando el botón de reproducir desde YouTube.
 - En la primera ejecución de la aplicación, desde la pantalla de inicio de sesión, no se puede lanzar el modo kiosko.
-- Durante la reproducción de contenido, el cursor no se oculta.
-- No se puede conectar un teléfono mediante el protocolo DIAL (el dispositivo no reconoce el equipo como un Chromecast), en cualquier caso debe emparejarlo mediante código de TV.
+
+- Las restricciones de DRM impiden visualizar contenido en resolución HD y superior. Eventualmente, la opción HD se habilitará, pero el contenido en FHD y superior seguirá siendo restringido. Este problema no se puede corregir, al menos de momento.
 
 ## ⚙️ Tests
 
 - ✔️ Windows 10 x64 - win32_x64/ia32.
 - ✔️ Ubuntu 19.04 x64 (VM) - linux_x64.
+- ✔️ Rasbian 10 Buster (Raspberry Pi4) - linux_armv7l.
+- ✔️ macOS 11 Big Sur (macbook air) - darwin (comprobado por [Mateo Fortea](https://github.com/mfortea)).
 
-No comprobado en Windows ARM, Linux ARM y macOS 
+No comprobado en Windows ni macOS para plataformas ARM. 
 
 ## 📦 Builds
-El proyecto se puede descargar compilado y listo para su uso.
-### Windows
-[YouTube TV-win32-ia32.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-ia32.zip)
+El proyecto se puede descargar compilado y listo para su uso. Disponible para Linux, macOS y Windows.
 
-[YouTube TV-win32-x64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-x64.zip)
-
-[YouTube TV-win32-arm64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-arm64.zip)
-
-### Linux
-
-[YouTube TV-linux-ia32.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-ia32.zip)
-
-[YouTube TV-linux-x64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-x64.zip)
-
-[YouTube TV-linux-arm64.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-arm64.zip)
-
-[YouTube TV-linux-armv7l.zip](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-linux-armv7l.zip)
-
-## 💿 Instaladores
-
-[YouTube TV-win32-x86.msi](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-x86.msi)
-
-[YouTube TV-win32-x64.msi](https://github.com/marcosrg9/YouTubeTV/releases/download/1.0.0/YouTube.TV-win32-x64.msi)
+[Todas las builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
 
 **Licencia Creative Commons**
 
