@@ -1,0 +1,7 @@
+node_modules/
+.git/
+windows_installer/
+dist/
+msi/
+msi-packager.js
+.DS_Store
