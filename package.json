@@ -6,6 +6,7 @@
     "main": "main.js",
     "dependencies": {
         "express": "^4.17.1",
+        "node-uuid": "^1.4.8",
         "peer-dial": "0.0.8"
     },
     "devDependencies": {
@@ -17,7 +18,8 @@
         "appId": "com.youtube.tv",
         "asar": true,
         "dmg": {
-            "contents": [{
+            "contents": [
+                {
                     "x": 131,
                     "y": 210
                 },
