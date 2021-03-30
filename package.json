@@ -1,7 +1,7 @@
 {
     "name": "youtube-tv-electron",
     "productName": "YouTube TV",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Cliente de YouTube TV sencillo para escritorio basado en electron.",
     "main": "main.js",
     "dependencies": {
@@ -30,7 +30,8 @@
                     "path": "/Applications"
                 }
             ],
-            "icon": "build/icon.icns"
+            "icon": "build/icon.icns",
+            "background": "build/background.png"
         },
         "linux": {
             "target": [
@@ -46,7 +47,13 @@
         }
     },
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "buildLinuxARMV7l": "electron-builder --linux --armv7l",
+        "buildLinux64": "electron-builder --linux --x64",
+        "buildLinuxia32": "electron-builder --linux --ia32",
+        "buildWindowsx64": "electron-builder --windows --x64",
+        "buildWindowsia32": "electron-builder --windows --ia32",
+        "buildmacOS": "electron-builder --macos --x64"
     },
     "author": "Marcos Rodríguez <marcosylrg@gmail.com>",
     "private": true,
