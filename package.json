@@ -1,7 +1,7 @@
 {
     "name": "youtube-tv-electron",
     "productName": "YouTube TV",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Cliente de YouTube TV sencillo para escritorio basado en electron.",
     "main": "main.js",
     "dependencies": {
