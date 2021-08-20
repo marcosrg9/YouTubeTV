@@ -59,7 +59,6 @@ La última actualización incluye varias mejoras:
 - Parches de seguridad.
 
 ## Informe detallado
----
 
 - Se ha implementado un sistema de simulación de resolución. Ahora YouTube TV puede simular una resolución superior a la de la pantalla para que la plataforma no restrinja las resoluciones máximas a las truncadas. La resolución está limitada a 4K de forma predeterminada, revisa la [sección de configuración](#🔧-configuración).
 
