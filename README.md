@@ -2,7 +2,8 @@
 <img src="./build/icon.png" width=90px>
 
 # **YouTube TV**
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg)](https://github.com/marcosrg9/YouTubeTV/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/1.1.1/total.svg?color=blue&label=2.2.1%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/2.2.1)
 
 Cliente de YouTube TV sencillo para escritorio basado en [electron](https://www.electronjs.org/). Puede conectar un dispositivo compatible, como un teléfono o un equipo con Google Chrome y enviar los vídeos a la aplicación para visualizarlos.
 
@@ -27,14 +28,16 @@ El proyecto se puede descargar compilado y listo para su uso. Disponible para Li
 
 | Plataforma    | Arquitectura | Enlace |
 |---------------|:------------:|:------:|
-| Windows       | x64          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-win32-x64.msi) |
-| Windows       | x32          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-win32-x86.msi) |
-| Linux (Deb)   | x64          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x64.deb) |
-| Linux (Deb)   | x32          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x32.deb) |
-| Linux (RPM)   | x64          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x64.rpm) |
-| Linux (RPM)   | x32          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x32.rpm) |
-| macOS         | x64          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-macos-x64.dmg) |
-| macOs         | ARM          | [🔗](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-macos-arm.dmg) |
+| Windows       | x64          | [![Windows x32](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-win32-x64.exe?color=blue&label=Windows%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-win32-x64.exe) |
+| Windows       | x32          | [![Windows x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-win32-x86.exe?color=blue&label=Windows%20x32)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-win32-x86.exe) |
+| Linux (Deb)   | x64          | [![Linux Debian x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x64.deb?color=D70A53&label=Debian%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x64.deb) |
+| Linux (Deb)   | x32          | [![Linux Debian x32](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x32.deb?color=D70A53&label=Debian%20x32)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x32.deb) |
+| Linux (Deb)   | ARM          | [![Linux Debian ARMv7l](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-armv7l.deb?color=D70A53&label=Debian%20ARMv7l)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-armv7l.deb) |
+| Linux (RPM)   | x64          | [![Linux RPM x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x64.rpm?color=B71515&label=Linux%20RPM%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x64.rpm) |
+| Linux (RPM)   | x32          | [![Linux RPM x32](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x32.rpm?color=B71515&label=Linux%20RPM%20x32)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x32.rpm) |
+| Linux (RPM)   | ARM          | [![Linux RPM ARMv7l](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-armv7l.rpm?color=B71515&label=Linux%20RPM%20ARMv7l)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-armv7l.rpm) |
+| macOS         | x64          | [![macOS x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-2.2.1-x64.dmg?color=FFFFFF&label=macOS%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-2.2.1-x64.dmg) |
+| macOs         | ARM          | [![macOS ARM64s](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-2.2.1-arm64.dmg?color=FFFFFF&label=macOS%20ARM64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-2.2.1-arm64.dmg) |
 
 [Todas las builds](https://github.com/marcosrg9/YouTubeTV/releases/tag/2.2.1)
 
@@ -77,8 +80,6 @@ La última actualización incluye varias mejoras:
 
 
 ## ⛔ Problemas conocidos
-
-- En la primera ejecución de la aplicación, desde la pantalla de inicio de sesión, no se puede lanzar el modo quiosco.
 
 - Si se genera una cola y después otro usuario se conecta (echa al que ya estaba conectado), la cola se elimina. Este no es el comportamiento esperado, pero es algo inevitable, parece ser el funcionamiento normal de la plataforma YouTube TV.
 
