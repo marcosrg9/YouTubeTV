@@ -3,7 +3,7 @@
 
 # **YouTube TV**
 [![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/1.1.1/total.svg?color=blue&label=2.2.1%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/2.2.1)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/total.svg?color=blue&label=2.2.1%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/2.2.1)
 
 Cliente de YouTube TV sencillo para escritorio basado en [electron](https://www.electronjs.org/). Puede conectar un dispositivo compatible, como un teléfono o un equipo con Google Chrome y enviar los vídeos a la aplicación para visualizarlos.
 
