@@ -9,6 +9,8 @@ const username = 'YouTube TV en el equipo de ' +
     
 class Dial {
 
+    server //= new dial.Server();
+
     constructor(server, renderer, port) {
         const apps = {
             "YouTube": {
@@ -17,7 +19,7 @@ class Dial {
                 allowStop: true,
                 pid: null,
                 launch: (a) => {
-                    renderer.window.loadURL(`http://www.youtube.com/tv?${a}`);
+                    renderer.dialReload(a);
                 }
             }
         };
@@ -43,6 +45,7 @@ class Dial {
                     callback(app.pid);
                 },
                 stopApp: function(appName, pid, callback) {
+                    renderer.toggleFullScreen(false);
                     const app = apps[appName];
                     if (app && app.pid == pid) {
                         app.pid = null;

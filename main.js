@@ -1,16 +1,28 @@
-// Modules
+const { randomInt } = require('crypto');
+
+const express = require('express')
+
 const { Renderer } = require('./renderer/main_renderer');
 const { Dial } = require('./servers/DIAL');
 
-// Third party packages
-const express = require('express');
+const server = express();
 
-// Declarations
-const appDial = express();
 const renderer = new Renderer();
-const dialPort = 2000;
+let dial;
 
-appDial.listen(dialPort, () => {
-    const dial = new Dial(appDial, renderer, dialPort);
-    dial.server.start();
-})
+
+const listen = (port = 2000) => {
+    server.listen(port, () => {
+        dial = new Dial(server, renderer, port)
+        dial.server.start();
+    })
+    .on('error',(err) => {
+        if (err.code == 'EADDRINUSE') {
+            listen(randomInt(1081, 65534));
+        }
+    })
+}
+
+listen();
+
+module.exports = { renderer };
