@@ -9,7 +9,7 @@
         "hosted-git-info": "^4.0.2",
         "lodash": "^4.17.21",
         "node-uuid": "^1.4.8",
-        "normalize-url": "^7.0.1",
+        "normalize-url": "^7.0.2",
         "path-parse": "^1.0.7",
         "peer-dial": "0.0.8",
         "trim-newlines": "^4.0.2"
