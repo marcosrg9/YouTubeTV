@@ -15,7 +15,7 @@
         "trim-newlines": "^4.0.2"
     },
     "devDependencies": {
-        "electron": "^13.2.1",
+        "electron": "^15.1.1",
         "electron-builder": "^22.9.1"
     },
     "build": {
