@@ -5,3 +5,4 @@ dist/
 msi/
 msi-packager.js
 .DS_Store
+package-lock.json

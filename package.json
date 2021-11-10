@@ -1,7 +1,7 @@
 {
     "name": "youtube-tv-electron",
     "productName": "YouTube TV",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "description": "Cliente de YouTube TV sencillo para escritorio basado en electron.",
     "main": "main.js",
     "dependencies": {
@@ -65,7 +65,5 @@
         "buildmacOS": "electron-builder --macos --x64",
         "buildmacOSARM": "electron-builder --macos --arm64"
     },
-    "author": "Marcos Rodríguez <marcosylrg@gmail.com>",
-    "private": true,
-    "license": "CC-BY-NC-SA"
+    "author": "Marcos Rodríguez <marcosylrg@gmail.com>"
 }

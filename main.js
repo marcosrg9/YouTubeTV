@@ -1,3 +1,8 @@
+/**
+ * YouTube TV Desktop Client.
+ * Copyright (c) 2020/21 Marcos Rodríguez Yélamo <marcosylrg@gmail.com>
+ */
+
 const { randomInt } = require('crypto');
 
 const express = require('express')

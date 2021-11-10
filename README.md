@@ -110,11 +110,3 @@ Nowadays the mayority of computers are provided with integrated graphics, i.e. t
 This implies more workload for the processor, and there are cases where resolutions above 2K/4K begin to affect performance at exagereted level.
 
 Obviously the final user can establish the resolution they prefer; nevertheless, YouTube is able to measure bandwith and automatically establish the best resolution available in relation with bandwith, which can be bothering, since frequently hardware capacities aren't enough to reproduce those resolutions that high.
-
-<center>
-
-**Creative Commons License**
-
-![CC-BY-NC-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.eu.svg)
-
-</center>
