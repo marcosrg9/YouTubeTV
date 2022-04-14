@@ -39,26 +39,16 @@ class Renderer {
                     try {
                         const { width, height } = JSON.parse(a);
                         this.setResEmulator(width, height);
-                        console.log('Estableciendo resolución preferida');
                     } catch (error) {
                         this.setResEmulator(3840,2160);
                     }
                 }
             })
             .catch((err) => {
-                console.log(err)
                 this.setResEmulator(3840,2160);
             })
 
-            ipcMain.on('network', (_, status) => {
-                if (typeof status == 'boolean') {
-                    console.log('Estado de primer inicio');
-                    console.log(status);
-                } else {
-                    console.log('Cambio de estado de red!');
-                    console.log(status);
-                }
-            })
+            //ipcMain.on('network', (_, status) => { })
 
             this.loadURL();
             
@@ -72,6 +62,7 @@ class Renderer {
                     this.settings = new Settings();
                 }
             })
+
             globalShortcut.register('ctrl+f', () => {
                 this.toggleFullScreen();
             })
@@ -148,11 +139,13 @@ class Renderer {
         `)
     }
 
+    /**
+     * Conmuta entre estados de pantalla completa.
+     * @param {boolean} forced Fuerza un estado concreto.
+     */
     toggleFullScreen(forced) {
-        if (forced == undefined) {
-            if (this.window.fullScreen) {
-                this.window.setFullScreen(false)
-            }
+        if (!forced || typeof forced !== 'boolean') {
+            this.window.setFullScreen(!this.window.fullScreen);
         } else {
             this.window.setFullScreen(forced);
         }
@@ -174,6 +167,7 @@ class Renderer {
             !a ? this.window.loadURL(this.url, {userAgent: this.userAgent})
             : this.window.loadURL(this.url+a, {userAgent: this.userAgent});
         } catch (error) {
+            debugger;
             console.error(error);
         }
     }
