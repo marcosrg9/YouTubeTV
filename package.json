@@ -55,7 +55,7 @@
         }
     },
     "scripts": {
-        "start": "electron .",
+        "start": "electron main.js",
         "debug": "electron . --inspect",
         "buildLinuxARMV7l": "electron-builder --linux --armv7l",
         "buildLinux64": "electron-builder --linux --x64",

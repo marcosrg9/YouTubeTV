@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron');
 
 class Settings {
 
@@ -22,6 +22,8 @@ class Settings {
                 const { renderer } = require('../main')
                 renderer.setMaxRes(params);
             })
+
+            globalShortcut.register('ctrl+shift+d', () => { this.window.webContents.toggleDevTools() });
     
             this.window.loadFile('./renderer/index.html');
 
