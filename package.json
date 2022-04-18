@@ -5,6 +5,9 @@
     "description": "Cliente de YouTube TV sencillo para escritorio basado en electron.",
     "main": "main.js",
     "dependencies": {
+        "@types/express": "^4.17.13",
+        "@types/node": "^17.0.24",
+        "@types/peer-dial": "0.0.1",
         "express": "^4.17.1",
         "hosted-git-info": "^4.0.2",
         "lodash": "^4.17.21",
