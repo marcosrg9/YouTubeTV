@@ -18,7 +18,7 @@
             experimental: 'Experimental',
             maxResMsg: 'Estrablecer una resolución máxima evitará que el equipo se quede sin recursos.',
             applyChk: 'Aplicar (requiere recarga)',
-            applyMsg: 'Puede aplicar los cambios después para impedir que se corte la reproducción.',
+            applyMsg: 'Puede aplicar los cambios después para impedir que la reproducción se detenga.',
             save: 'Guardar'
         },
         en: {
@@ -28,7 +28,7 @@
             experimental: 'Experimental',
             maxResMsg: 'Setting a maximum resolution will prevent the computer from running out of resources.',
             applyChk: 'Apply (reload required)',
-            applyMsg: 'You can apply the changes afterwards to prevent playback from being cut off.',
+            applyMsg: 'You can apply the changes afterwards to prevent playback from stopping..',
             save: 'Save'
         }
     }
@@ -55,12 +55,12 @@
     </div>
     <h4 id="maxRes" style="margin-bottom: 3px;">Resolución máxima</h4>
     <select value="4K" id="res">
-        <option value="7680-4320">8K (Experimental) - Hasta 4320p</option>
-        <option value="3840-2160" selected="selected">4K - Hasta 2016p</option>
-        <option value="2560-1440">2K - Hasta 1440p</option>
-        <option value="1920-1080">FHD - Hasta 1080p</option>
-        <option value="1280-720">HD - Hasta 720p</option>
-        <option value="720-576">SD - Hasta 480p</option>
+        <option value="7680-4320">4320p (Experimental - 8K)</option>
+        <option value="3840-2160" selected="selected">2016p (4K)</option>
+        <option value="2560-1440">1440p (2K)</option>
+        <option value="1920-1080">1080p (FHD)</option>
+        <option value="1280-720">720p (HD)</option>
+        <option value="720-576">480p (SD)</option>
     </select>
     <label class="dimmed" style="margin-top: 5px" id="maxResMsg">Establecer una resolución máxima evitará que el equipo se quede sin recursos.</label>
     <div style="display: flex; width: 100%; margin-top: 10px;">

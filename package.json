@@ -1,9 +1,21 @@
 {
     "name": "youtube-tv-electron",
     "productName": "YouTube TV",
-    "version": "2.2.4",
+    "version": "2.3.0",
     "description": "Cliente de YouTube TV sencillo para escritorio basado en electron.",
     "main": "main.js",
+    "scripts": {
+        "start": "electron main.js",
+        "debug": "electron . --inspect",
+        "compile": "tsc",
+        "buildLinuxARMV7l": "electron-builder --linux --armv7l",
+        "buildLinux64": "electron-builder --linux --x64",
+        "buildLinuxia32": "electron-builder --linux --ia32",
+        "buildWindowsx64": "electron-builder --windows --x64",
+        "buildWindowsia32": "electron-builder --windows --ia32",
+        "buildmacOS": "electron-builder --macos --x64",
+        "buildmacOSARM": "electron-builder --macos --arm64"
+    },
     "dependencies": {
         "@types/express": "^4.17.13",
         "@types/node": "^17.0.24",
@@ -56,17 +68,6 @@
             "target": "NSIS",
             "icon": "build/icon.ico"
         }
-    },
-    "scripts": {
-        "start": "electron main.js",
-        "debug": "electron . --inspect",
-        "buildLinuxARMV7l": "electron-builder --linux --armv7l",
-        "buildLinux64": "electron-builder --linux --x64",
-        "buildLinuxia32": "electron-builder --linux --ia32",
-        "buildWindowsx64": "electron-builder --windows --x64",
-        "buildWindowsia32": "electron-builder --windows --ia32",
-        "buildmacOS": "electron-builder --macos --x64",
-        "buildmacOSARM": "electron-builder --macos --arm64"
     },
     "author": "Marcos Rodríguez <marcosylrg@gmail.com>"
 }

@@ -1,3 +1,8 @@
+import { App } from 'peer-dial';
+
+/** DIAL Apps object declaration */
+export interface Apps { [key: string]: App };
+
 /** Aplicación DIAL sin evento de lanzamiento. */
 export interface DialAppWithoutLaunch {
 

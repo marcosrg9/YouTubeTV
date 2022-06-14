@@ -138,7 +138,7 @@ const loadConnectionEvents = () => {
         // Emite al renderizador (?)
         window.ipc.send('network', ('online'));
 
-        // Elimina la clase visible pasados los 2 segundos.
+        // Elimina la clase visible pasados los 5 segundos.
         setTimeout(() => { rest.classList.remove('visible') }, 5000);
 
     })
@@ -155,7 +155,7 @@ const loadConnectionEvents = () => {
         // Emite al renderizador (?)
         window.ipc.send('network', ('offline'));
         
-        // Elimina la clase visible pasados los 2 segundos.
+        // Elimina la clase visible pasados los 5 segundos.
         setTimeout(() => { lost.classList.remove('visible') }, 5000);
     })
 
