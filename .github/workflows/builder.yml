@@ -6,11 +6,7 @@ on:
 
 jobs:
   release:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: macos-12
 
     steps:
       - name: Check out Git repository
@@ -19,7 +15,18 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 14
+
+      - name: Install dependencies
+        run: "npm install"
+
+      - name: Install dmg-license
+        run: "npm install dmg-license"
+
+      - name: Brew install rpm
+        uses: ConorMacBride/install-package@v1
+        with:
+          brew: rpm
 
       - name: Compile from Typescript to Javascript
         run: "npm run compile"

@@ -8,13 +8,10 @@
         "start": "electron main.js",
         "debug": "electron . --inspect",
         "compile": "tsc",
-        "buildLinuxARMV7l": "electron-builder --linux --armv7l",
-        "buildLinux64": "electron-builder --linux --x64",
-        "buildLinuxia32": "electron-builder --linux --ia32",
-        "buildWindowsx64": "electron-builder --windows --x64",
-        "buildWindowsia32": "electron-builder --windows --ia32",
-        "buildmacOS": "electron-builder --macos --x64",
-        "buildmacOSARM": "electron-builder --macos --arm64"
+        "build": "npm run build:mac && npm run build:win && npm run build:linux",
+        "build:mac": "electron-builder --mac --x64 --arm64",
+        "build:win": "electron-builder --win --x64 --ia32",
+        "build:linux": "electron-builder --linux --x64 --arm64 --armv7l"
     },
     "dependencies": {
         "@types/express": "^4.17.13",
