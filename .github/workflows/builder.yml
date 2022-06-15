@@ -27,11 +27,14 @@ jobs:
         uses: ConorMacBride/install-package@v1
         with:
           brew: rpm
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4.0.0
 
-      - name: Compile from Typescript to Javascript
+      - name: Compile to Javascript
         run: "npm run compile"
 
-      - name: Build/release Electron app
+      - name: Build/release YouTube TV app
         uses: samuelmeuli/action-electron-builder@v1
         with:
           # GitHub token, automatically provided to the action
