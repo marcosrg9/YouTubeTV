@@ -29,7 +29,9 @@ jobs:
           brew: rpm
       
       - name: Setup Python
-        uses: actions/setup-python@v4.0.0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
       - name: Compile to Javascript
         run: "npm run compile"
