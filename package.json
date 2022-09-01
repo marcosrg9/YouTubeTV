@@ -18,7 +18,7 @@
         "@types/node": "^17.0.24",
         "@types/peer-dial": "0.0.1",
         "express": "^4.17.1",
-        "hosted-git-info": "^4.0.2",
+        "hosted-git-info": "^5.1.0",
         "lodash": "^4.17.21",
         "node-uuid": "^1.4.8",
         "normalize-url": "^7.0.2",
