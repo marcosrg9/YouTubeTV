@@ -177,8 +177,6 @@ export class Renderer {
         // Get the current window size.
         const [ width, height ] = this.window.getSize();
 
-        const sizes: Size = { width: emuWidth, height: emuHeight };
-
         this.window.webContents.disableDeviceEmulation();
         
         this.window.webContents.enableDeviceEmulation({
@@ -206,7 +204,7 @@ export class Renderer {
             }
         })
 
-        globalShortcut.register('ctrl+f', () => { this.fullScreen = true; })
+        globalShortcut.register('ctrl+f', () => { this.fullScreen = null; })
 
         globalShortcut.register('ctrl+d', () => { this.window.webContents.toggleDevTools(); })
 
@@ -241,13 +239,12 @@ export class Renderer {
         if (typeof value !== 'string') return;
         if (value.length < 1) return;
     
-        /* this.fullScreen = true; */
-        this.window.setFullScreen(true)
+        this.fullScreen = true;
         this.window.webContents.loadURL(this._url + value, { userAgent: this.userAgent })
     }
 
     public set fullScreen(value: boolean | null) {
-        if (typeof value === null) {
+        if (value === null) {
             this._fullScreen = !this._fullScreen;
             this.window.fullScreen = this._fullScreen;
         } else {

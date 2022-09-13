@@ -6,3 +6,5 @@ msi/
 msi-packager.js
 .DS_Store
 package-lock.json
+*.js
+!renderers/main/injection.js

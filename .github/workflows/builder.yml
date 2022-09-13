@@ -1,39 +1,44 @@
-name: Build/release
+#
+# This action does not work correctly, it should add the generated artifacts to a release
+# automatically, but it does not.
+#
 
-on: 
-  - push
-
-jobs:
-  release:
-    runs-on: macos-12
-
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v3
-
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: "npm install"
-
-      - name: Brew install rpm
-        uses: ConorMacBride/install-package@v1
-        with:
-          brew: rpm
-
-      - name: Compile to Javascript
-        run: "npm run compile"
-
-      - name: Build/release YouTube TV app
-        uses: samuelmeuli/action-electron-builder@v1.6.0
-        with:
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.github_token }}
-
-          # If the commit is tagged with a version (e.g. "v1.0.0"),
-          # release the app after building
-          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+#name: Build/release
+#
+#on: 
+#  - push
+#
+#jobs:
+#  release:
+#    runs-on: macos-12
+#
+#    steps:
+#      - name: Check out Git repository
+#        uses: actions/checkout@v3
+#
+#      - name: Install Node.js, NPM and Yarn
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: 14
+#
+#      - name: Install dependencies
+#        run: "npm install"
+#
+#      - name: Brew install rpm
+#        uses: ConorMacBride/install-package@v1
+#        with:
+#          brew: rpm
+#
+#      - name: Compile to Javascript
+#        run: "npm run compile"
+#
+#      - name: Build/release YouTube TV app
+#        uses: samuelmeuli/action-electron-builder@v1.6.0
+#        with:
+#          # GitHub token, automatically provided to the action
+#          # (No need to define this secret in the repo settings)
+#          github_token: ${{ secrets.github_token }}
+#
+#          # If the commit is tagged with a version (e.g. "v1.0.0"),
+#          # release the app after building
+#          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
