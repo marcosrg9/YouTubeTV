@@ -3,7 +3,7 @@
 
 # **YouTube TV**
 [![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/total.svg?color=blue&label=2.2.1%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/2.2.1)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v2.3.2/total.svg?color=blue&label=2.3.2%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/2.3.2)
 
 Simple YouTube TV Client for desktop based on [electron](https://www.electronjs.org/). It can connect with a compatible device, like a phone or a computer with Google Chrome and send videos to the application to visualize them.
 
@@ -28,61 +28,27 @@ It can use ```npm start``` or else ```npx electron .``` .
 If you already have electron installed globally, you can start the app with ```electron .```
 
 ## 📦 Builds
-The project can be downloaded already built and ready to use. Available for Linux, macOS and Windows. On x86, x84 and ARM architectures.
+The project can be downloaded already built and ready to use. Available for Linux, macOS and Windows. On x86, x84 and ARM architectures.\
+**⚠️ Note: The 32-bit architecture is no longer supported on Linux, and support for Windows is planned to be removed in the future.**
 
-| Platform      | Architecture | Link   |
-|---------------|:------------:|:------:|
-| Windows       | x64          | [![Windows x32](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-win32-x64.exe?color=blue&label=Windows%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-win32-x64.exe) |
-| Windows       | x32          | [![Windows x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-win32-x86.exe?color=blue&label=Windows%20x32)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-win32-x86.exe) |
-| Linux (Deb)   | x64          | [![Linux Debian x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x64.deb?color=D70A53&label=Debian%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x64.deb) |
-| Linux (Deb)   | x32          | [![Linux Debian x32](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x32.deb?color=D70A53&label=Debian%20x32)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x32.deb) |
-| Linux (Deb)   | ARM          | [![Linux Debian ARMv7l](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-armv7l.deb?color=D70A53&label=Debian%20ARMv7l)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-armv7l.deb) |
-| Linux (RPM)   | x64          | [![Linux RPM x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x64.rpm?color=B71515&label=Linux%20RPM%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x64.rpm) |
-| Linux (RPM)   | x32          | [![Linux RPM x32](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-x32.rpm?color=B71515&label=Linux%20RPM%20x32)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-x32.rpm) |
-| Linux (RPM)   | ARM          | [![Linux RPM ARMv7l](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-linux-armv7l.rpm?color=B71515&label=Linux%20RPM%20ARMv7l)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-linux-armv7l.rpm) |
-| macOS         | x64          | [![macOS x64](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-2.2.1-x64.dmg?color=FFFFFF&label=macOS%20x64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-2.2.1-x64.dmg) |
-| macOs         | ARM          | [![macOS ARM64s](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/2.2.1/YouTube.TV-2.2.1-arm64.dmg?color=FFFFFF&label=macOS%20ARM64)](https://github.com/marcosrg9/YouTubeTV/releases/download/2.2.1/YouTube.TV-2.2.1-arm64.dmg) |
+| Platform      |   Architecture   |  Link  |
+|---------------|:----------------:|:------:|
+| Windows       | x32/x64          | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2.exe) |
+| Linux (Deb)   | x64              | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2-amd64.deb) |
+| Linux (Deb)   | ARM64            | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2-arm64.deb) |
+| Linux (Deb)   | ARMv7l           | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2-armv7l.deb) |
+| Linux (RPM)   | x64              | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2-amd64.rpm) |
+| Linux (RPM)   | ARM              | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2-armv7l.rpm) |
+| macOS         | Intel (x64)      | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2.dmg) |
+| macOs         | Apple Chip (ARM) | [Download](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.2/YouTube.TV.2.3.2-arm64.dmg) |
 
-[All builds](https://github.com/marcosrg9/YouTubeTV/releases/tag/2.2.1)
+[All builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
 
 ## ⌨️ Key shortcuts
-- 🆕 Max. resolution config panel: <kbd>Ctrl</kbd> + <kbd>S</kbd>
+- Max. resolution config panel: <kbd>Ctrl</kbd> + <kbd>S</kbd>
 - Fullscreen: <kbd>Ctrl</kbd> + <kbd>F</kbd>.
 - Developer Tools: <kbd>Ctrl</kbd> + <kbd>D</kbd>.
 - Change cursor visibility: <kbd>Ctrl</kbd> + <kbd>A</kbd>.
-
-
-## 🔄 Latest update (2.2.1)
-
-Latest update includes various upgrades:
-- Up to 8K resolution support. ([Limited to 4K by default](#🔧-Configuration))
-- Background playback support.
-- UX upgrade.
-- Server resistant to occupied ports.
-- Security patches.
-
-## Detailed report
-
-- A resolution simulation system has been implemented. Now YouTube TV can simulate a resolution higher than the screen's to not have the maximum resolutions limited by the platform to the truncated ones.
-
-- A serious bug has been fixed that didn't let the server initialize when the port was occupied. Now it will try to initialize at the default port (2000), and if this is already occupied, it will try again as many times as needed with random ports.
-
-- Now YouTube TV enters fullscreen mode automatically when a device is connected and exits when is disconnected.
-
-- YouTube TV is now able to play content in background even when losing focus. This was being triggered by a visibility change event that the own platform was listening to. This event has been canceled.
-
-- Electron updated to version 13.2.1.
-
-- Solved Security bugs:
-    - [CVE-2021-23343](https://github.com/advisories/GHSA-hj48-42vr-x3v9)
-    - [CVE-2021-33502](https://github.com/advisories/GHSA-px4h-xg32-q955)
-    - [CVE-2021-33623](https://github.com/advisories/GHSA-7p7h-4mm5-852v)
-    - [CVE-2021-23362](https://github.com/advisories/GHSA-43f8-2h32-f4cj)
-    - [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm)
-
-## ⛔ Known problems
-
-- If a queue is generated and then another user gets connected (the already connected user gets kicked out), the queue is removed. This is not the expected behaviour, but it's something inevitable, it seems to be the normal way of working on the YouTube TV platform.
 
 ## ⚙️ Tests
 
