@@ -11,7 +11,8 @@
         "build": "npm run build:mac && npm run build:win && npm run build:linux",
         "build:mac": "electron-builder --mac --x64 --arm64",
         "build:win": "electron-builder --win --x64 --ia32",
-        "build:linux": "electron-builder --linux --x64 --arm64 --armv7l"
+        "build:linux": "electron-builder --linux --x64 --arm64 --armv7l",
+        "buildRetinaDMGBackground": "tiffutil -cathidpicheck background.png background@2x.png -out background.tiff"
     },
     "dependencies": {
         "@types/express": "^4.17.13",
@@ -35,30 +36,29 @@
         "productName": "YouTube TV",
         "appId": "com.youtube.tv",
         "asar": true,
-        "directories": {
-            "output": "../YTV_Builds"
+        "directories": { "output": "../YTV_Builds" },
+        "mac": {
+            "category": "public.app-category.entertainment",
+            "target": "dmg",
+            "icon": "build/youtube_bigsur_icon.icns"
         },
         "dmg": {
             "contents": [
                 {
-                    "x": 131,
-                    "y": 210
+                    "x": 207,
+                    "y": 253
                 },
                 {
-                    "x": 370,
-                    "y": 210,
+                    "x": 494,
+                    "y": 253,
                     "type": "link",
                     "path": "/Applications"
                 }
             ],
-            "icon": "build/icon.icns",
-            "background": "build/background.png"
+            "background": "build/background.tiff"
         },
         "linux": {
-            "target": [
-                "deb",
-                "rpm"
-            ],
+            "target": [ "deb", "rpm" ],
             "icon": "build/icon.icns",
             "packageCategory": "Video"
         },
