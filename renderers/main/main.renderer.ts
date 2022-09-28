@@ -25,7 +25,7 @@ export interface resolution {
 export class Renderer {
 
     /** userAgent allowed by YouTube TV. */
-    private userAgent:  string = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754';
+    private readonly userAgent:  string = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754';
 
     /** Electron process */
     private window:     BrowserWindow;
@@ -43,7 +43,7 @@ export class Renderer {
     private _fullScreen: boolean = false;
 
     /** YouTube TV url with path/params */
-    private _url:       string = 'https://www.youtube.com/tv?';
+    private readonly _url: string = 'https://www.youtube.com/tv?';
 
     /** JavaScript injection code */
     private jsic:       string = '';
@@ -227,20 +227,38 @@ export class Renderer {
      * If value is '__DFT__', the default YouTube TV url will be loaded.
      * */
     public set url(value: string) {
+        let url = value;
         if (typeof value !== 'string') return;
         if (value.length < 1) return;
-        if (value === '__DFT__') value = '';
+        if (value === '__DFT__') url = '';
         
-        this.window.loadURL(this._url + value, { userAgent: this.userAgent })
-        //this.injectJSCode();
+        this.window.loadURL(this._url + url, { userAgent: this.userAgent })
+        .catch(async() => {
+
+            ipcMain.once('restored', () => { this.url = value });
+
+            const offline = await readFile(join(__dirname, 'offline_banner.js'), { encoding: 'utf8' });
+            this.window.webContents.executeJavaScript(offline);
+
+        })
     }
 
-    set urlByDial (value: string) {
+    public set urlByDial (value: string) {
         if (typeof value !== 'string') return;
         if (value.length < 1) return;
     
         this.fullScreen = true;
+
         this.window.webContents.loadURL(this._url + value, { userAgent: this.userAgent })
+        // This should never happen...
+        .catch(async() => {
+
+            ipcMain.once('restored', () => { this.url = value });
+
+            const offline = await readFile(join(__dirname, 'offline_banner.js'), { encoding: 'utf8' });
+            this.window.webContents.executeJavaScript(offline);
+
+        })
     }
 
     public set fullScreen(value: boolean | null) {
