@@ -1,5 +1,3 @@
-console.log('Archivo de customización cargado... Esperando evento de carga.');
-
 // Mensajes de estado.
 const msgDB = {
     es: {
@@ -161,7 +159,16 @@ const loadConnectionEvents = () => {
 
 }
 
-console.warn('Inyectando parches');
+const listenLocalStorageQueries = () => {
+
+    window.ipc.on('localStorageQuery', (event, { type, data }) => {
+
+        const inf = window.localStorage.getItem(data);
+        event.sender.send('localStorageQueryResponse', inf);
+
+    })
+
+}
 
 // Carga la anulación de eventos de cambios de visibilidad.
 visibilityChangeOverriding();
@@ -174,3 +181,10 @@ loadConnectionWarnings();
 
 // Carga los eventos de cambio de conexión con el servidor de YouTube TV.
 loadConnectionEvents();
+
+// Escucha las peticiones de consultas al localStorage.
+listenLocalStorageQueries();
+
+// Indica al proceso principal que el código se ha cargado.
+
+console.log('JavaScript enhancements loaded at', new Date(Date.now()).toISOString());
