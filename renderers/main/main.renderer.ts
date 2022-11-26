@@ -48,6 +48,9 @@ export class Renderer {
     /** JavaScript injection code */
     private jsic: string = '';
 
+    /** JavaScript injection title bar styles */
+    private titleBar: string = '';
+
     constructor() {
 
         // Set app menu to null.
@@ -61,7 +64,7 @@ export class Renderer {
 
             this.url = '__DFT__';
 
-            this.window.webContents.on('dom-ready', this.injectJSCode.bind(this) );
+            this.window.webContents.on('dom-ready', () => this.injectJSCode.bind(this));
 
             this.setAccelerators();
 
@@ -77,9 +80,7 @@ export class Renderer {
                 }
             })
         })
-        .on('window-all-closed', () => {
-            if (platform() === 'darwin') app.quit();
-        })
+        .on('window-all-closed', () => { app.quit() })
     }
 
     /** Create a new renderer window. */
@@ -88,7 +89,7 @@ export class Renderer {
         this.window = new BrowserWindow({
             width: 1230,
             height: 720,
-            titleBarStyle: 'default',
+            titleBarStyle: platform() === 'darwin' ? 'hiddenInset' : 'default',
             fullscreen: false,
             fullscreenable: true,
             title: 'YouTube TV',
@@ -105,16 +106,34 @@ export class Renderer {
         
     }
 
-    /** Inject a JavaScript code into the renderer process to patch events and add some features. */
-    private async injectJSCode() {
+    /**
+     * Inject a JavaScript code into the renderer process to patch events and add some features.
+     * @param script Type of script to be injected.
+     * */
+    private async injectJSCode(script: 'all' | 'patchs' | 'titlebar' = 'all') {
 
         try {
 
             if (this.jsic === '') {
                 this.jsic = await readFile(join(__dirname, 'injection.js'), { encoding: 'utf8' });
             }
-            
-            this.window.webContents.executeJavaScript(this.jsic);
+
+            if (platform() === 'darwin' && this.titleBar === '') {
+                this.titleBar = await readFile(join(__dirname, 'titleBar.js'), { encoding: 'utf8' });
+                
+            }
+
+            if (script === 'all') {
+                this.window.webContents.executeJavaScript(this.jsic);
+                platform() === 'darwin' ? this.window.webContents.executeJavaScript(this.titleBar) : false;
+                
+            } else if (script === 'patchs') {
+                this.window.webContents.executeJavaScript(this.jsic);
+
+            } else if (script === 'titlebar') {
+                platform() === 'darwin' ? this.window.webContents.executeJavaScript(this.titleBar) : false;
+
+            }
             
         } catch (error) {
             debugger;
@@ -280,7 +299,7 @@ export class Renderer {
                 }
             })
             .catch(err => {
-                // If the data is not valid or not available, set the default resolution.
+                // If the data is invalid or not available, set the default resolution.
                 this.setResEmulator(3840, 2160);
             })
 
@@ -297,10 +316,14 @@ export class Renderer {
         if (value === '__DFT__') url = '';
 
         this.window.loadURL(this._url + url, { userAgent: this.userAgent })
+        .then(() => {
+            this.injectJSCode();
+        })
         .catch(async() => {
 
             ipcMain.once('restored', () => { this.url = value });
 
+            this.injectJSCode('titlebar');
             const offline = await readFile(join(__dirname, 'offline_banner.js'), { encoding: 'utf8' });
             this.window.webContents.executeJavaScript(offline);
 
@@ -314,11 +337,15 @@ export class Renderer {
         this.window.fullScreen = true;
 
         this.window.webContents.loadURL(this._url + value, { userAgent: this.userAgent })
+        .then(() => {
+            this.injectJSCode();
+        })
         // This should never happen...
         .catch(async() => {
 
-            ipcMain.once('restored', () => { this.url = value });
-
+            ipcMain.once('restored', () => { this.urlByDial = value });
+            
+            this.injectJSCode('titlebar');
             const offline = await readFile(join(__dirname, 'offline_banner.js'), { encoding: 'utf8' });
             this.window.webContents.executeJavaScript(offline);
 

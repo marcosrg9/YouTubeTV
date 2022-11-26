@@ -3,9 +3,9 @@
 
 # **YouTube TV**
 [![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v2.3.4/total.svg?color=blue&label=2.3.4%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v2.3.4)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v2.4.1/total.svg?color=blue&label=2.4.1%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v2.4.1)
 
-Cliente de YouTube TV sencillo para escritorio basado en [electron](https://www.electronjs.org/). Puede conectar un dispositivo compatible, como un teléfono o un equipo con Google Chrome y enviar los vídeos a la aplicación para visualizarlos.
+Cliente de YouTube TV sencillo para escritorio basado en [electron](https://www.electronjs.org/). Puede conectar un dispositivo compatible, como un teléfono o un equipo con Google Chrome y enviar los vídeos a la aplicación para visualizarlos, igual que en ChromeCast o televisores inteligentes con YouTube.
 
 <img src="./readme/demo_player.png" width="600px">
 
@@ -33,19 +33,17 @@ Si ya tiene instalado electron de forma global, podrá iniciar la app con ```ele
 ## 📦 Builds
 El proyecto se puede descargar compilado y listo para su uso. Disponible para Linux, macOS y Windows. En arquitecturas x86, x64 y ARM.
 
-**⚠️ Nota: La arquitectura de 32 bits ya no es soportada para Linux, y se planea eliminar el soporte para Windows en el futuro.**
-
 | Platform      |   Architecture   |  Link  |
 |---------------|:----------------:|:------:|
-| Windows       | x32/x64          | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4.exe) |
-| Linux (Deb)   | x64              | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-amd64.deb) |
-| Linux (Deb)   | ARM64            | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-arm64.deb) |
-| Linux (Deb)   | ARMv7l           | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-armv7l.deb) |
-| Linux (RPM)   | x64              | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-x86_64.rpm) |
-| Linux (RPM)   | ARMv7l           | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-armv7l.rpm) |
-| Linux (RPM)   | ARM64            | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-aarch64.rpm) |
-| macOS         | Intel (x64)      | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4.dmg) |
-| macOs         | Apple Chip (ARM) | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.3.4/YouTube.TV-2.3.4-arm64.dmg) |
+| Windows       | x32/x64          | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1.exe) |
+| Linux (Deb)   | x64              | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-amd64.deb) |
+| Linux (Deb)   | ARM64            | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-arm64.deb) |
+| Linux (Deb)   | ARMv7l           | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-armv7l.deb) |
+| Linux (RPM)   | x64              | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-x86_64.rpm) |
+| Linux (RPM)   | ARMv7l           | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-armv7l.rpm) |
+| Linux (RPM)   | ARM64            | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-aarch64.rpm) |
+| macOS         | Intel (x64)      | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1.dmg) |
+| macOs         | Apple Chip (ARM) | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-arm64.dmg) |
 
 [Todas las builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
 
@@ -58,12 +56,13 @@ El proyecto se puede descargar compilado y listo para su uso. Disponible para Li
 
 No comprobado en Windows y macOS para plataformas ARM, excepto linux ARM para Raspberry (armv7l). 
 
-## 🔌 Mensaje fuera de conexión – [Última actualización – 2.3.4] 
-
-Cuando YouTube TV carga sin conexión, mostrará un mensaje indicando que no es posible conectarse con los servidores de YouTube.
-
-Cuando el renderizador detecte conectividad, lo volverá a intentar nuevamente.
-<img src="./readme/offline_message_es.png" with="300px">
+## ⚡️ Últimos cambios [2.4.0/2.4.1]
+### **2.4.1**
+- Error solucionado por el cual el proceso de YouTube TV no se cerraba completamente en plataformas que no fueran macOS.
+- La barra de título es transparente (solo para macOS).
+- La barra de título de la ventana de configuración no cargaba el título en español.
+### **2.4.0**
+- YouTube TV almacena parámetros del estado de la ventana principal de forma persistente, tales como posición, tamaño, pantalla completa y visibilidad del cursor.
 
 ## 🔧 Configuración
 

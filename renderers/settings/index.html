@@ -80,6 +80,8 @@
 
         const opts = document.querySelector('#res').options;
 
+        document.title = msg.settings;
+
         for (let i = 0; i < opts.length; i++) {
 
             opts[i].innerText = opts[i].innerText.replace('Hasta', msg.upto)

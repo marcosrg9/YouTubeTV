@@ -185,6 +185,4 @@ loadConnectionEvents();
 // Escucha las peticiones de consultas al localStorage.
 listenLocalStorageQueries();
 
-// Indica al proceso principal que el código se ha cargado.
-
 console.log('JavaScript enhancements loaded at', new Date(Date.now()).toISOString());
