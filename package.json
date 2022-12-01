@@ -22,7 +22,7 @@
         "hosted-git-info": "^5.1.0",
         "lodash": "^4.17.21",
         "node-uuid": "^1.4.8",
-        "normalize-url": "^7.0.2",
+        "normalize-url": "^8.0.0",
         "path-parse": "^1.0.7",
         "peer-dial": "0.0.8",
         "trim-newlines": "^4.0.2"
