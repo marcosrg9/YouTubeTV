@@ -25,7 +25,7 @@
         "normalize-url": "^7.0.2",
         "path-parse": "^1.0.7",
         "peer-dial": "0.0.8",
-        "trim-newlines": "^4.0.2"
+        "trim-newlines": "^5.0.0"
     },
     "devDependencies": {
         "electron": "^20.1.1",
