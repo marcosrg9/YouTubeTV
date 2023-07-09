@@ -3,13 +3,17 @@ import { platform } from 'os';
 import { cwd } from 'process';
 import { join } from 'path';
 import { Settings } from '../settings/settings.renderer';
+import { ElectronBlocker } from '@cliqz/adblocker-electron';
+import fetch from 'cross-fetch';
+
 
 import { app,
          BrowserWindow,
          nativeImage,
          globalShortcut,
          Menu,
-         ipcMain } from 'electron';
+         ipcMain,
+         session } from 'electron';
 
 export interface resolution {
 
@@ -31,7 +35,7 @@ interface windowParams {
 export class Renderer {
 
     /** userAgent allowed by YouTube TV. */
-    private readonly userAgent: string = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754';
+    private readonly userAgent: string = 'Mozilla/5.0 (PS4; Leanback Shell) Gecko/20100101 Firefox/65.0 LeanbackShell/01.00.01.75 Sony PS4/ (PS4, , no, CH)';
 
     /** Electron process */
     private window: BrowserWindow;
@@ -59,6 +63,8 @@ export class Renderer {
         app.on('ready', () => {
 
             this.createWindow();
+
+            this.injectBlocker();
 
             this.listenWindowMoveEvents();
 
@@ -139,6 +145,12 @@ export class Renderer {
             debugger;
             // throw new Error(error as unknown as any);
         }
+    }
+
+    private injectBlocker() {
+        ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
+            blocker.enableBlockingInSession(session.defaultSession);
+          });
     }
 
     public setMaxRes(params: { width: number, height: number, reload: boolean }) {
