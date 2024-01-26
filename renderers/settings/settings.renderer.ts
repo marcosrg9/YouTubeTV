@@ -10,7 +10,7 @@ export class Settings {
 		app.whenReady().then(() => {
 
 			this.window = new BrowserWindow({
-				resizable: false,
+				resizable: true,
 				fullscreen: false,
 				width: 400,
 				height: 500,
@@ -27,7 +27,7 @@ export class Settings {
 				renderer.setMaxRes(params);
 			})
 
-			globalShortcut.register('ctrl+shift+d', () => { this.window.webContents.toggleDevTools() });
+			globalShortcut.register('ctrl+shift+i', () => { this.window.webContents.toggleDevTools() });
 
 			this.window.loadFile(join(__dirname, 'index.html'));
 		})

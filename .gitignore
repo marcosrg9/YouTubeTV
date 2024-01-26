@@ -10,3 +10,4 @@ package-lock.json
 !renderers/main/injection.js
 !renderers/main/offline_banner.js
 !renderers/main/titleBar.js
+YTV_Builds/
