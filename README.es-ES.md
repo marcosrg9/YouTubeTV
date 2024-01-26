@@ -20,17 +20,15 @@ Este readme está disponible en los siguientes idiomas:
 
 Implementa un servidor [DIAL](https://en.wikipedia.org/wiki/Discovery_and_Launch) (basado en [SSDP](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol)) para permitir la conexión desde dispositivos que usan este mismo protocolo (limitado a YouTube en esta aplicación).
 
-Usa el userAgent permitido por YouTube TV:
+Usa el siguiente user agent, que permite reproducir vídeos en HD:
 ```
-Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754
+Mozilla/5.0 (PS4; Leanback Shell) Gecko/20100101 Firefox/65.0 LeanbackShell/01.00.01.75 Sony PS4/ (PS4, , no, CH)
 ```
 
 Puede usar ```npm start``` o bien ```npx electron .```.
 Si ya tiene instalado electron de forma global, podrá iniciar la app con ```electron .```
 
-
-
-## 📦 Builds
+## 📦 Builds. ⚠️ No actualizado
 El proyecto se puede descargar compilado y listo para su uso. Disponible para Linux, macOS y Windows. En arquitecturas x86, x64 y ARM.
 
 | Platform      |   Architecture   |  Link  |
@@ -50,13 +48,17 @@ El proyecto se puede descargar compilado y listo para su uso. Disponible para Li
 ## ⌨️ Atajos de teclado
 - Panel de configuración de resolución máxima: <kbd>Ctrl</kbd> + <kbd>S</kbd>
 - Pantalla completa: <kbd>Ctrl</kbd> + <kbd>F</kbd>.
-- Developer Tools: <kbd>Ctrl</kbd> + <kbd>D</kbd>.
+- Herramientas de desarrollador: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
+- Recargar página: <kbd>Ctrl</kbd> + <kbd>R</kbd>
 - Alternar visibilidad del cursor: <kbd>Ctrl</kbd> + <kbd>A</kbd>.
 
 
 No comprobado en Windows y macOS para plataformas ARM, excepto linux ARM para Raspberry (armv7l). 
 
-## ⚡️ Últimos cambios [2.4.0/2.4.1]
+## ⚡️ Últimos cambios [2.4.0/2.4.1/2.4.2]
+### **2.4.2**
+- Se añadió un adblock y se permite calidad HD (ya estaba pero no fue anunciado aquí).
+- Electron actualizado a su última versión.
 ### **2.4.1**
 - Error solucionado por el cual el proceso de YouTube TV no se cerraba completamente en plataformas que no fueran macOS.
 - La barra de título es transparente (solo para macOS).

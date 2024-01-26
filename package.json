@@ -1,7 +1,7 @@
 {
     "name": "youtube-tv",
     "productName": "YouTube TV",
-    "version": "2.4.1",
+    "version": "2.4.2",
     "description": "Simple YouTube TV client for desktop based on electron.",
     "main": "main.js",
     "scripts": {
@@ -15,7 +15,7 @@
         "buildRetinaDMGBackground": "tiffutil -cathidpicheck background.png background@2x.png -out background.tiff"
     },
     "dependencies": {
-        "@cliqz/adblocker-electron": "^1.26.8",
+        "@cliqz/adblocker-electron": "^1.26.15",
         "@types/express": "^4.17.13",
         "@types/node": "^18.7.14",
         "@types/peer-dial": "0.0.1",
@@ -30,7 +30,7 @@
         "trim-newlines": "^4.0.2"
     },
     "devDependencies": {
-        "electron": "^20.1.1",
+        "electron": "^28.2.0",
         "electron-builder": "^23.0.2",
         "typescript": "^4.7.3"
     },
@@ -39,7 +39,7 @@
         "appId": "com.youtube.tv",
         "asar": true,
         "directories": {
-            "output": "../YTV_Builds"
+            "output": "./YTV_Builds"
         },
         "mac": {
             "category": "public.app-category.entertainment",

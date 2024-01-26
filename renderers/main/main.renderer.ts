@@ -216,7 +216,10 @@ export class Renderer {
 
         globalShortcut.register('ctrl+f', () => { this.fullScreen = !this.window.isFullScreen(); })
 
-        globalShortcut.register('ctrl+d', () => { this.window.webContents.toggleDevTools(); })
+        globalShortcut.register('ctrl+shift+i', () => { this.window.webContents.toggleDevTools(); }) 
+
+        globalShortcut.register('ctrl+r', () => { this.window.webContents.
+            reload(); })
 
         globalShortcut.register('ctrl+a', () => this.cursor = null);
         

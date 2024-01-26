@@ -20,14 +20,14 @@ This readme is available in the following languages:
 
 It implements a [DIAL](https://en.wikipedia.org/wiki/Discovery_and_Launch) server (based in [SSDP](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol)) to allow connection from devices that use this same protocol (limited to YouTube in this application).
 
-Use the userAgent allowed by YouTube TV:
+Uses the following user agent which allows videos to play on HD quality:
 ```
-Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754
+Mozilla/5.0 (PS4; Leanback Shell) Gecko/20100101 Firefox/65.0 LeanbackShell/01.00.01.75 Sony PS4/ (PS4, , no, CH)
 ```
 It can use ```npm start``` or else ```npx electron .``` .
 If you already have electron installed globally, you can start the app with ```electron .```
 
-## 📦 Builds
+## 📦 Builds. ⚠️ Not updated
 The project can be downloaded already built and ready to use. Available for Linux, macOS and Windows. On x86, x84 and ARM architectures.
 
 | Platform      |   Architecture   |  Link  |
@@ -47,12 +47,16 @@ The project can be downloaded already built and ready to use. Available for Linu
 ## ⌨️ Key shortcuts
 - Max. resolution config panel: <kbd>Ctrl</kbd> + <kbd>S</kbd>
 - Fullscreen: <kbd>Ctrl</kbd> + <kbd>F</kbd>.
-- Developer Tools: <kbd>Ctrl</kbd> + <kbd>D</kbd>.
+- Developer Tools: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
+- Refresh site: <kbd>Ctrl</kbd> + <kbd>R</kbd>
 - Change cursor visibility: <kbd>Ctrl</kbd> + <kbd>A</kbd>.
 
 Not tested on Windows and macOS for ARM platforms, except for ARM Linux for Raspberry (armv7l).
 
-## ⚡️ Last changes [2.4.0/2.4.1]
+## ⚡️ Last changes [2.4.0/2.4.1/2.4.2]
+### **2.4.2**
+- Added adblocker and HD quality (it's been there for some time but just not posted here).
+- Update electron to latest version
 ### **2.4.1**
 - Fixed bug where the YouTube TV process would not close completely on platforms other than macOS.
 - The title bar is transparent (macOS only).
@@ -72,6 +76,6 @@ Resolution has been limited from the developing environment for the following re
 
 Nowadays the mayority of computers are provided with integrated graphics, i.e. they share memory with the rest of the system, different to discrete graphic cards, which include their own memory modules where they have an isolated storage space without external load.
 
-This implies more workload for the processor, and there are cases where resolutions above 2K/4K begin to affect performance at exagereted level.
+This implies more workload for the processor, and there are cases where resolutions above 2K/4K begin to affect performance at exagerated level.
 
 Obviously the final user can establish the resolution they prefer; nevertheless, YouTube is able to measure bandwith and automatically establish the best resolution available in relation with bandwith, which can be bothering, since frequently hardware capacities aren't enough to reproduce those resolutions that high.
