@@ -1,0 +1,22 @@
+{
+    "resolution": "4k",
+    "keepSize": {
+        "enabled": true,
+        "fullScreen": false,
+        "bounds": {
+            "x": 1230,
+            "y": 0,
+            "width": 0,
+            "height": 0
+        }
+    },
+    "DIAL": {
+        "enabled": true,
+        "name": ""
+    },
+    "background": false,
+    "userAgent": {
+        "useCustomUA": false,
+        "customUA": ""
+    }
+}

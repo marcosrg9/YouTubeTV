@@ -2,12 +2,12 @@
 <img src="./build/icon.png" width=90px>
 
 # **YouTube TV**
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v2.4.1/total.svg?color=blue&label=2.4.1%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v2.4.1)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Descargas%20totales)](https://github.com/marcosrg9/YouTubeTV/releases/)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v3.0.0/total.svg?color=blue&label=Descargas%20en%20la%20versión%203.0.0)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v3.0.0)
 
-Cliente de YouTube TV sencillo para escritorio basado en [electron](https://www.electronjs.org/). Puede conectar un dispositivo compatible, como un teléfono o un equipo con Google Chrome y enviar los vídeos a la aplicación para visualizarlos, igual que en ChromeCast o televisores inteligentes con YouTube.
+YouTube TV es una aplicación que lleva la versión de YouTube para televisores a los escritorios, igual que Chromecast o un televisor inteligente.
 
-<img src="./readme/demo_player.png" width="600px">
+<img src="./readme/es/main.png" width="600px">
 
 </div><br>
 
@@ -15,67 +15,173 @@ Cliente de YouTube TV sencillo para escritorio basado en [electron](https://www.
 
 Este readme está disponible en los siguientes idiomas:
 
-- 🇺🇸 [Inglés](./README.md)
 - 🇪🇸 Español
-
-Implementa un servidor [DIAL](https://en.wikipedia.org/wiki/Discovery_and_Launch) (basado en [SSDP](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol)) para permitir la conexión desde dispositivos que usan este mismo protocolo (limitado a YouTube en esta aplicación).
-
-Usa el userAgent permitido por YouTube TV:
-```
-Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754
-```
-
-Puede usar ```npm start``` o bien ```npx electron .```.
-Si ya tiene instalado electron de forma global, podrá iniciar la app con ```electron .```
+- 🇺🇸 [Inglés](./README.md)
 
 
+## 📦 Descargas
 
-## 📦 Builds
-El proyecto se puede descargar compilado y listo para su uso. Disponible para Linux, macOS y Windows. En arquitecturas x86, x64 y ARM.
+YouTube TV está disponible para Linux, Windows y macOS. Puede encontrar binarios precompilados para la mayoría de plataformas. Si su plataforma es linux sobre arm, consulte la cita que se encuentra después de la lista de descargas.
 
-| Platform      |   Architecture   |  Link  |
-|---------------|:----------------:|:------:|
-| Windows       | x32/x64          | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1.exe) |
-| Linux (Deb)   | x64              | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-amd64.deb) |
-| Linux (Deb)   | ARM64            | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-arm64.deb) |
-| Linux (Deb)   | ARMv7l           | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-armv7l.deb) |
-| Linux (RPM)   | x64              | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-x86_64.rpm) |
-| Linux (RPM)   | ARMv7l           | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-armv7l.rpm) |
-| Linux (RPM)   | ARM64            | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-aarch64.rpm) |
-| macOS         | Intel (x64)      | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1.dmg) |
-| macOs         | Apple Chip (ARM) | [Descargar](https://github.com/marcosrg9/YouTubeTV/releases/download/v2.4.1/YouTube_TV-2.4.1-arm64.dmg) |
+<table width="100px">
+    <tr>
+        <th><img width="441" height="1">Plataforma<img width="441" height="1"></th>
+        <th><img width="441" height="1">Arquitectura<img width="441" height="1"></th>
+        <th><img width="441" height="1">Enlace<img width="441" height="1"></th>
+    </tr>
+    <tr>
+        <td rowspan="2">Windows</td>
+        <td>x64</td>
+        <td align="center">
+        <!-- YouTube TV Setup 3.0.0.exe -->
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV Setup 3.0.0-x64.exe"><img src="https://img.shields.io/badge/Descargar-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
+        </td>
+    </tr>
+    <tr>
+        <td>ARM</td>
+        <!-- YouTube TV Setup 3.0.0.exe -->
+        <td align="center">
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV Setup 3.0.0-arm64.exe"><img src="https://img.shields.io/badge/Descargar-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="2">macOS</td>
+        <td>x64</td>
+        <td align="center">
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0.dmg"><img src="https://img.shields.io/badge/Descargar-black?style=for-the-badge&logo=apple"></a>
+        </td>
+    </tr>
+    <tr>
+        <td>Apple Silicon (ARM)</td>
+        <td align="center">
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-arm64.dmg"><img src="https://img.shields.io/badge/Descargar-black?style=for-the-badge&logo=apple"></a>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="1">Linux (Debian)</td>
+        <td>x64</td>
+        <td align="center">
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-x64.deb"><img src="https://img.shields.io/badge/Descargar-A80030?style=for-the-badge&logo=debian"></a>
+        </td>
+    </tr>
+    <!-- <tr>
+        <td>ARMv7l (Ej. RPI4)</td>
+        <td align="center">
+            <a><img src="https://img.shields.io/badge/Descargar-A80030?style=for-the-badge&logo=debian"></a>
+        </td>
+    </tr> -->
+    <tr>
+        <td rowspan="1">Linux (RedHat)</td>
+        <td>x64</td>
+        <td align="center">
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-x64.rpm"><img src="https://img.shields.io/badge/Descargar-ee0000?style=for-the-badge&logo=redhat"></a>
+        </td>
+    </tr>
+    <!-- <tr>
+        <td>ARMv7l (Ej. RPI4)</td>
+        <td align="center">
+            <a><img src="https://img.shields.io/badge/Descargar-ee0000?style=for-the-badge&logo=redhat"></a>
+        </td>
+    </tr> -->
+</table>
 
 [Todas las builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
 
+> [!NOTE]
+> 1. Las versiones de 32 bits se han dejado de distribuir.
+>
+> 2. **No hay soporte para ARM en Linux**, puede obtener más información en los siguientes lugares:
+>       - [Sitio web de Chromium](https://issues.chromium.org/issues/438403374)
+>       - [Castlabs Issue GitHub #198](https://github.com/castlabs/electron-releases/issues/198)
+>       - [Castlabs Issue GitHub #146 (RPi)](https://github.com/castlabs/electron-releases/issues/146)
+>
+>       Estaré atento en cada build para comprobar el estado del soporte.
+
 ## ⌨️ Atajos de teclado
-- Panel de configuración de resolución máxima: <kbd>Ctrl</kbd> + <kbd>S</kbd>
-- Pantalla completa: <kbd>Ctrl</kbd> + <kbd>F</kbd>.
-- Developer Tools: <kbd>Ctrl</kbd> + <kbd>D</kbd>.
-- Alternar visibilidad del cursor: <kbd>Ctrl</kbd> + <kbd>A</kbd>.
 
+- **Ventana de configuración**: <kbd>Ctrl</kbd> + <kbd>S</kbd>
+- **Pantalla completa**: <kbd>Ctrl</kbd> + <kbd>F</kbd>.
+- **Alternar visibilidad** del cursor: <kbd>Ctrl</kbd> + <kbd>A</kbd>.
 
-No comprobado en Windows y macOS para plataformas ARM, excepto linux ARM para Raspberry (armv7l). 
-
-## ⚡️ Últimos cambios [2.4.0/2.4.1]
-### **2.4.1**
-- Error solucionado por el cual el proceso de YouTube TV no se cerraba completamente en plataformas que no fueran macOS.
-- La barra de título es transparente (solo para macOS).
-- La barra de título de la ventana de configuración no cargaba el título en español.
-### **2.4.0**
-- YouTube TV almacena parámetros del estado de la ventana principal de forma persistente, tales como posición, tamaño, pantalla completa y visibilidad del cursor.
+**Para desarrolladores**:
+- **DevTools de la ventana principal**: <kbd>Ctrl</kbd> + <kbd>D</kbd>.
+- **DevTools de la ventana de configuración**: <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd>.
+- **Mostrar opciones ocultas**: 
 
 ## 🔧 Configuración
 
-YouTube TV incluye ahora una ventana para configurar la resolución máxima de reproducción.
+YouTube TV incorpora una serie de preferencias que puedes ajustar a tu gusto.\
+Para abrir esta ventana, pulsa la combinación de teclas <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+> [!NOTE]
+> Puedes moverte por la configuración usando las flechas de teclado, igual que en la ventana principal.
+> - <kbd>↑</kbd>: Mover a la opción superior.
+> - <kbd>↓</kbd>: Mover a la opción inferior.
+> - <kbd>←</kbd>: Volver a la barra lateral.
+> - <kbd>→</kbd>: Mover a la primera opción de la sección actual.
+> <br><br>
 
-Esta ventana se abre pulsando las teclas <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+### Resolución máxima:
+
+Establecer una resolución máxima puede beneficiar al dispositivo si este no tiene un hardware con la capacidad suficiente para representar vídeo de alta calidad pero YouTube determina que en, base a la velocidad de la red, puede reproducir una alta resolución.\
+Puede ser útil para dispositivos como una Raspberry Pi.
+
 <div align="center">
-<img src="./readme/settings.png" width="300">
+<img src="./readme/es/resolution.png" width="400">
 </div>
-La resolución ha sido limitada desde el entorno de desarrollo por la siguiente razón:
 
-Hoy en día la mayoría de equipos disponen de gráficas integradas, esto quiere decir que comparten memoria con el resto del sistema, a diferencia de las gráficas discretas que incluyen sus propios módulos de memoria donde tienen un espacio aislado de almacenamiento sin carga externa.
+> **Nota**: a partir de la versión 3.0.0, esta configuración parece no estar teniendo un comportamiento esperado. Cuando esta opción se implemetó, en realidad fue para "engañar" a YouTube haciéndole creer que el dispositivo tenía una capacidad de resolución mayor para poder visualizar contenido a mayor calidad, luego esta opción se añadió como una configuración de limitación adicional.<br>Sin embargo, en la versión 3.0.0 se realizaron cambios que puede haber afectado a cómo YouTube determina esta capacidad, de forma que siempre se obtienen resoluciones de vídeo de hasta 4K.
 
-Esto implica más carga de trabajo para el procesador, y hay casos en los que resoluciones superiores a 2K/4K empiezan a afectar al rendimiento de forma exagerada.
+### Mantener tamaño:
 
-Evidentemente el usuario final puede establecer la resolución que desee, sin embargo, YouTube es capaz de medir el ancho de banda y establecer automáticamente la mejor resolución disponible en relación al ancho de banda, lo cual se puede volver molesto, pues muchas veces la potencia del hardware no es suficiente para reproducir resoluciones tan altas.
+YouTube TV puede recordar la ubicación de la ventana y el estado de pantalla completa.
+Sin embargo sería posible que esta configuración, de forma predeterminada, resultara incómoda para ciertos usuarios, por lo que ahora se permite activarlo o desactivarlo.
+
+<div align="center">
+<img src="./readme/es/keepsize.png" width="400">
+</div>
+
+### Transmitir
+
+YouTube TV permite usar tu teléfono para enviar contenido usando la aplicación de YouTube. Funciona exactamente igual que YouTube en un Chromecast o un televisor inteligente con la aplicación YouTube.\
+Consulta la guía de Google para obtener [más información](https://support.google.com/chromecast/answer/2995235?hl=es).
+
+<div align="center">
+<img src="./readme/es/cast.png" width="400">
+</div>
+
+Esta opción está activada por defecto, sin embargo puedes desactivarla si lo crees necesario.
+
+Además, puedes añadir un nombre personalizado para reconocer tu equipo más facilmente cuando quieras enviar contenido.
+
+<!-- ### Segundo plano [no implementado]
+
+YouTube TV puede mantenerse en segundo plano a la espera de que algún dispositivo se conecte para transmitir contenido.
+
+Cuando esta opción esté activada, YouTube TV se mantendrá en un estado de pausa hasta que algún teléfono se conecte a él.
+
+<div align="center">
+<img src="./readme/settings/background.png" width="400">
+</div>
+
+> **Nota**: esta opción requiere que el servicio de conectividad esté activado, en caso contrario no funcionará. -->
+
+## ⚡️ Registro de cambios (3.0.0)
+- Se ha logrado integrar un sistema DRM. [Más información](/castlabs)
+- Finalmente se puede lograr visualizar contenido hasta en 4K, aunque existe una opción para 8K, no parece funcionar adecuadamente.
+- Se ha rediseñado por completo la configuración.
+- Se ha añadido un pequeño sistema de alertas para versiones más nuevas.
+- Se ha implementado un sistema de internacionalización. Ahora es posible añadir nuevos idiomas facilmente.
+- Ahora es posible definir un nombre de dispositivo personalizado para transmitir contenido desde un teléfono.
+- Se ha actualizado dependencias.
+
+## Deuda técnica
+- El renderizador de configuración se ha reelaborado muy rápido sin tener en cuenta la estructura que podría implementarse en un futuro, por lo que añadir nuevas secciones va a ser muy complejo, se deja pendiente de refactorización.
+
+## ⚠️ Nota sobre el bloqueo de anuncios
+He recibido en algunas ocasiones propuestas para añadir un bloqueador de anuncios.\
+Cuando empecé a desarrollar esta aplicación, mi intención fue usarla en una Raspberry Pi, únicamente por disfrute personal, sin embargo iba añadiendo los cambios a GitHub, principalmente para tener algo más en mi portfolio de cara a mi perfil profesional, además de compartir algo con el mundo.
+
+El objetivo de esta aplicación es **que la experiencia de usuario sea lo más fiel posible a una solución que podría ser desarrollada por Google**.\
+En la versión 3.0.0 se ha implementado un bloqueador de anuncios, únicamente para poder hacer las decenas de pruebas que tuve que realizar sin tener que esperar a que los anuncios terminen, pero lo he desactivado en las compilaciones públicas y solo está disponible en entorno de desarrollo. Cualquier desarrollador que quiera hacer aportaciones encontrará la forma de activarlo.
+
+Comprendo la incomodidad de los anuncios, soy el primero en afirmarlo y soy consciente de ello, pero no es el objetivo de esta aplicación. Por lo tanto, a partir de ahora rechazaré todas las PR y cerraré las propuestas que impliquen bloquear anuncios.

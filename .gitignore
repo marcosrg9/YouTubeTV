@@ -7,6 +7,10 @@ msi-packager.js
 .DS_Store
 package-lock.json
 *.js
+*.d.ts
+!castlabs-sign.js
+!ultrawide_patcher.js
+*.map
 !renderers/main/injection.js
 !renderers/main/offline_banner.js
 !renderers/main/titleBar.js

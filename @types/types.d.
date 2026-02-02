@@ -1,0 +1,55 @@
+declare module 'bsdiff-node' {
+
+	/**
+	 * Calcula las diferencias entre dos ficheros y genera un fichero diferencial en el sistema de archivos.
+	 * @param oldFile Fichero anterior.
+	 * @param newFile Fichero con cambios.
+	 * @param patchFile Fichero diferencial de salida.
+	 * @returns Promesa que se cumple cuando el proceso diff ha finalizado.
+	 */
+	export function diff(oldFile: string, newFile: string, patchFile: string): Promise<number>;
+
+	/**
+	 * Calcula las diferencias entre dos ficheros y genera un fichero diferencial en el sistema de archivos.
+	 * @param oldFile Fichero anterior.
+	 * @param newFile Fichero con cambios.
+	 * @param patchFile Fichero diferencial de salida.
+	 * @param callback Función ejecutada al finalizar el proceso.
+	 */
+	export function diff(oldFile: string, newFile: string, patchFile: string, callback: (result: number, err: string) => void): void;
+	
+	/**
+	 * Calcula las diferencias entre dos ficheros y genera un fichero diferencial de forma síncrona en el sistema de archivos.
+	 * @param oldFile Fichero anterior.
+	 * @param newFile Fichero con cambios.
+	 * @param patchFile Fichero diferencial de salida.
+	 */
+	export function diffSync(oldFile: string, newFile: string, patchFile: string): number;
+
+	/**
+	 * Reconstruye el fichero final calculando las diferencias del fichero anterior y el fichero diferencial.
+	 * @param oldFile Fichero anterior.
+	 * @param newFile Fichero final de salida reconstruido.
+	 * @param patchFile Fichero diferencial.
+	 * @returns Promesa que se cumple cuando el proceso de reconstrucción ha finalizado.
+	 */
+	export function patch(oldFile: string, newFile: string, patchFile: string): Promise<number>;
+
+	/**
+	 * Reconstruye el fichero final calculando las diferencias del fichero anterior y el fichero diferencial.
+	 * @param oldFile Fichero anterior.
+	 * @param newFile Fichero final de salida reconstruido.
+	 * @param patchFile Fichero diferencial.
+	 * @param callback Función lanzada al finalizar el proceso.
+	 */
+	export function patch(oldFile: string, newFile: string, patchFile: string, callback: (result: number, err: string) => void): void;
+
+	/**
+	 * Reconstruye el fichero final calculando las diferencias del fichero anterior y el fichero diferencial de forma síncrona.
+	 * @param oldFile Fichero anterior.
+	 * @param newFile Fichero final de salida reconstruido.
+	 * @param patchFile Fichero diferencial.
+	 */
+	export function patchSync(oldFile: string, newFile: string, patchFile: string): number;	
+
+}

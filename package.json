@@ -1,34 +1,31 @@
 {
     "name": "youtube-tv",
     "productName": "YouTube TV",
-    "version": "2.4.1",
+    "version": "3.0.0",
     "description": "Simple YouTube TV client for desktop based on electron.",
     "main": "main.js",
     "scripts": {
-        "start": "electron main.js",
+        "start": "tsc && electron main.js",
         "debug": "electron . --inspect",
         "compile": "tsc",
         "build": "npm run build:mac && npm run build:win && npm run build:linux",
         "build:mac": "electron-builder --mac --x64 --arm64",
-        "build:win": "electron-builder --win --x64 --ia32",
-        "build:linux": "electron-builder --linux --x64 --arm64 --armv7l",
+        "build:win": "electron-builder --win --x64 --arm64",
+        "build:linux": "electron-builder --linux --x64",
         "buildRetinaDMGBackground": "tiffutil -cathidpicheck background.png background@2x.png -out background.tiff"
     },
     "dependencies": {
+        "auto-launch": "^5.0.6",
+        "express": "^4.17.1",
+        "peer-dial": "0.0.8"
+    },
+    "devDependencies": {
+        "@ghostery/adblocker-electron": "^2.13.0",
+        "@types/auto-launch": "^5.0.5",
         "@types/express": "^4.17.13",
         "@types/node": "^18.7.14",
         "@types/peer-dial": "0.0.1",
-        "express": "^4.17.1",
-        "hosted-git-info": "^5.1.0",
-        "lodash": "^4.17.21",
-        "node-uuid": "^1.4.8",
-        "normalize-url": "^7.0.2",
-        "path-parse": "^1.0.7",
-        "peer-dial": "0.0.8",
-        "trim-newlines": "^4.0.2"
-    },
-    "devDependencies": {
-        "electron": "^20.1.1",
+        "electron": "github:castlabs/electron-releases#v37.10.3+wvcus",
         "electron-builder": "^23.0.2",
         "typescript": "^4.7.3"
     },
@@ -36,7 +33,25 @@
         "productName": "YouTube TV",
         "appId": "com.youtube.tv",
         "asar": true,
-        "directories": { "output": "../YTV_Builds" },
+        "afterPack": "./build/hooks/castlabs-sign.js",
+        "directories": {
+            "output": "../YTV_Builds"
+        },
+        "extraResources": [
+            {
+                "from": "./data/persistence.placeholder.json",
+                "to": "./data/persistence.placeholder.json",
+                "filter": [ "**/*" ]
+            },
+            {
+                "from": "./i18n/",
+                "to": "./i18n/",
+                "filter": [ "**/*.json" ]
+            }
+        ],
+        "electronDownload": {
+            "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
+        },
         "mac": {
             "category": "public.app-category.entertainment",
             "target": "dmg",
@@ -58,7 +73,10 @@
             "background": "build/background.tiff"
         },
         "linux": {
-            "target": [ "deb", "rpm" ],
+            "target": [
+                "deb",
+                "rpm"
+            ],
             "icon": "build/icon.icns",
             "packageCategory": "Video"
         },

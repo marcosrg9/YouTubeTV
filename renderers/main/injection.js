@@ -1,5 +1,5 @@
 // Mensajes de estado.
-const msgDB = {
+/* const msgDB = {
     es: {
         rest: 'Vuelves a tener conexión',
         lost: 'No tienes conexión'
@@ -14,28 +14,46 @@ let msg = msgDB.en;
 
 Object.keys(msgDB).forEach(lang => {
     if (lang === navigator.language) msg = msgDB[lang];
-});
+}); */
 
 /**
  * Anula los eventos de cambio de visibilidad para que se permita continuar la reproducción aún cuando
  * se cambie el foco de la ventana.
  */
-const visibilityChangeOverriding = () => {
 
-    document.addEventListener('webkitvisibilitychange', event => {
-        event.stopImmediatePropagation();
-    }, true);
+/* document.addEventListener('webkitvisibilitychange', event => {
+    event.stopImmediatePropagation();
+    return;
+}, true);
 
-    document.addEventListener('visibilitychange', event => {
-        event.stopImmediatePropagation();
-    }, true);
+document.addEventListener('visibilitychange', event => {
+    event.stopImmediatePropagation();
+    return;
+}, true);
 
-}
+window.addEventListener('blur', event => {
+    event.stopImmediatePropagation();
+    return;
+}, true); */
+
+
+Object.defineProperty(document, 'hidden', { get: () => false, configurable: true });
+Object.defineProperty(document, 'visibilityState', { get: () => 'visible', configurable: true });
+
+// 2. Bloquear eventos de visibilidad (para que no disparen listeners de pausa)
+const block = e => {
+    e.stopImmediatePropagation();
+    e.stopPropagation(); // Añadido para asegurar
+};
+
+document.addEventListener('visibilitychange', block, true);
+document.addEventListener('webkitvisibilitychange', block, true);
+document.addEventListener('mozvisibilitychange', block, true);
 
 /**
  * Observa los cambios de la etiqueta título para recuperar el título original (YouTube TV).
  */
-const observeTitleChanges = () => {
+/* const observeTitleChanges = () => {
 
     document.title = 'YouTube TV'
 
@@ -107,13 +125,13 @@ const loadConnectionWarnings = () => {
     // Añade los estilos.
     document.body.appendChild(styles)
 
-}
+} */
 
 /**
  * Escucha eventos de cambio de estado de conexión al servidor de YouTube TV (para versiones posteriores).
  * Se dispara cuando pierde conexión al servidor y cuando se recupera.
  */
-const loadConnectionEvents = () => {
+/* const loadConnectionEvents = () => {
 
     // Carga el IPC de electron.
     window.ipc = window.require('electron').ipcRenderer;
@@ -168,21 +186,38 @@ const listenLocalStorageQueries = () => {
 
     })
 
-}
+} */
 
 // Carga la anulación de eventos de cambios de visibilidad.
-visibilityChangeOverriding();
+//visibilityChangeOverriding();
 
 // Observa el cambio de título.
-observeTitleChanges();
+//observeTitleChanges();
 
 // Carga los avisos de estado de conexión.
-loadConnectionWarnings();
+//loadConnectionWarnings();
 
 // Carga los eventos de cambio de conexión con el servidor de YouTube TV.
-loadConnectionEvents();
+//loadConnectionEvents();
 
 // Escucha las peticiones de consultas al localStorage.
-listenLocalStorageQueries();
+//listenLocalStorageQueries();
+
+let timeout
+document.onmousemove = () => {
+
+    if(!timeout) {
+        timeout = setTimeout(() => {
+            document.querySelector('html').style.cursor = 'none';
+            timeout = null;
+        }, 2000)
+    } else {
+        document.querySelector('html').style.cursor = 'unset';
+        timeout = setTimeout(() => {
+            document.querySelector('html').style.cursor = 'none';
+            timeout = null;
+        }, 2000)
+    }
+}
 
 console.log('JavaScript enhancements loaded at', new Date(Date.now()).toISOString());

@@ -15,19 +15,26 @@ import { randomInt } from 'crypto';
 
 export class Dial {
 
-    /** Stores allowed apps */
+    /** Stores allowed apps. */
     private apps: Apps;
-    /** Stores the DIAL server */
+    /** Stores the DIAL server. */
     private server: Server;
     /** Stores the express application server. */
     private exServer: Express = express();
-    /** Stores the server port */
+    /** Stores the server port. */
     private port: number;
+    /** Stores the server status. */
+    private _listening: boolean = false;
 
     /**
      * Instantiate a new DIAL server.
      */
-    constructor() {
+    constructor(private _friendlyName: string = "") {
+        this.loadServer();
+        this.listen();
+    }
+
+    private loadServer() {
 
         // Basic DIAL server configuration.
         this.apps = {
@@ -47,18 +54,16 @@ export class Dial {
             port: this.getRandomPort(),
             prefix: '/dial',
             corsAllowOrigins: '*',
-            friendlyName: this.getFriendlyName(),
+            friendlyName: this.friendlyName,
             delegate: {
                 getApp: (appName: string) => {
                     return this.apps[appName];
                 },
                 launchApp: this.onLaunch.bind(this),
-                stopApp: this.onStop.bind(this)
+                stopApp: this.onStop.bind(this),
             }
         })
 
-        this.listen();
-        
     }
 
     /**
@@ -95,6 +100,7 @@ export class Dial {
     private onStop(appName: string, pid: string, callback: (data: boolean) => void) {
 
         const app = this.apps[appName];
+        console.log('DIAL stopped')
 
         if (app && app.pid === pid) {
             app.pid = '';
@@ -123,10 +129,12 @@ export class Dial {
 
         this.exServer.listen(port, () => {
             this.server.start();
+            this._listening = true;
         })
         .on('error', (err: NodeJS.ErrnoException) => {
             if (err.code === 'EADDRINUSE') {
                 this.listen(randomInt(1081, 65534));
+                this._listening = false;
             }
         })
 
@@ -143,7 +151,32 @@ export class Dial {
     }
 
     /** Generate a friendly name for the server. */
-    private getFriendlyName() {
+
+    public stop() {
+        this.server.stop();
+        this._listening = false;
+    }
+
+    public start() {
+        this.server.start();
+        this._listening = true;
+    }
+
+    public set friendlyName(name: string) {
+
+        if(name == this._friendlyName) return;
+
+        this.server.stop();
+        this._friendlyName = name;
+        this.loadServer();
+        this.listen();
+
+    }
+
+    public get friendlyName(): string {
+
+        if(this._friendlyName && this._friendlyName.length > 0) return this._friendlyName;
+        
         let hname = hostname();
 
         if (hname.includes('.local')) {
@@ -159,5 +192,10 @@ export class Dial {
 
         // Returns a name like "YouTube on Marco's MacBook Pro"
         return `YouTube TV on ${hname}`;
+
+    }
+
+    public get listening() {
+        return this._listening
     }
 }

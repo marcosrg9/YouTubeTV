@@ -1,0 +1,200 @@
+* {
+    color: white;
+    font-family: 'Roboto';
+    font-weight: normal;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background: #1a1a1a;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+}
+
+p {
+    line-height: 14pt;
+    color: #909090
+}
+
+.titlebar {
+    -webkit-app-region: drag;
+    margin: 0px -20px;
+    padding-left: 40px !important;
+    padding-bottom: 0px;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.sidebar {
+    margin: 0px 20px;
+    min-width: 35%;
+}
+.sidebar > div {
+    font-size: 12pt;
+    padding: 15px 20px;
+    border-radius: 12px;
+    fill: #CCCCCC;
+    display: flex;
+    align-items: center;
+}
+.sidebar > div > .material-symbols-outlined {
+    margin-right: 10px;
+}
+.sidebar > div > span {
+    color: #CCCCCC;
+}
+
+.sidebar > div:hover {
+    background: #2a2a2a;
+}
+
+.sidebar > div.select {
+    background: white;
+    font-weight: bold;
+}
+.sidebar > div.select > span,
+.sidebar > div.select > svg {
+    color: black;
+    fill: black;
+}
+.sidebar > div.select > .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+}
+
+.divisor {
+    border-width: 1px;
+    border-color: #7a7a7a;
+    margin-right: 20px;
+    border-right: 0px;
+}
+
+.section {
+    width: 100%;
+    max-height: 100vh;
+    padding: 0px 20px 0px 0px;
+    overflow-y: scroll;
+}
+
+.section::-webkit-scrollbar {
+    display: none;
+}
+
+.section > div {
+    display: none;
+}
+.section > div.visible {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.section > div > :first-child {
+    padding: 15px 10px 0px 0px;
+    -webkit-app-region: drag;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section > div > :first-child > .material-symbols-outlined {
+    margin-right: 10px;
+    font-size: 21pt;
+}
+
+/*  Selector    */
+/* .optselector {
+    padding: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.optselector.hover,
+.optselector.selected.hover {
+    background: white !important;
+    color: black !important;
+}
+
+.optselector.hover > span,
+.optselector.selected.hover > span {
+    color: black !important;
+}
+
+.optselector.selected {
+    background: #373737;
+}
+
+.optselector.selected::after {
+    content: 'check';
+    font-family: 'Material Symbols';
+    color: inherit;
+}
+ */
+input[type="text"] {
+    padding: 20px 0px 20px 20px;
+    width: calc(100% - 20px);
+    border-radius: 100px;
+    background: #373737;
+    border: 0px;
+    outline: none;
+    font-size: 12pt;
+}
+
+/*  Max Resolution section styles */
+div[sectionIndex="0"] > :nth-child(2) > div {
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+    user-select: none;
+    opacity: 0;
+}
+
+
+
+/*************************************************/
+
+.optselector {
+    padding: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    background: #2a2a2a;
+    margin-bottom: 5px;
+}
+
+.optselector > label > input[type="radio"] {
+    appearance: none;
+}
+
+.optselector > label > span {
+    width: 100%;
+    color: inherit;
+}
+
+div.hover > input[type="text"],
+.optselector:hover > label,
+.optselector:hover,
+.optselector.hover > label,
+.optselector.hover,
+.optselector.selected.hover {
+    background: white !important;
+    color: black !important;
+}
+
+.optselector.selected {
+    background: #373737;
+}
+
+.optselector.selected::after {
+    content: 'check';
+    font-family: 'Material Symbols';
+    color: inherit;
+}

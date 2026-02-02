@@ -1,0 +1,56 @@
+{
+    "dialogs": {
+        "load_settings_corrupt": {
+            "title": "",
+            "message": "Configuration read error",
+            "detail": "An error occurred while reading the YouTube TV configuration.\nThis may be caused by incorrect writing or file tampering.\nWould you like to reset to default settings?",
+            "buttons": [ "Yes", "No" ],
+            "cancelId": 1
+        },
+        "update_available": {
+            "title": "",
+            "message": "Update available",
+            "detail": "A new version of YouTube TV is available.\nWould you like to visit the download site?",
+            "buttons": [ "Yes", "Don't ask again", "No" ],
+            "cancelId": 2
+        }
+    },
+    "renderer": {
+        "settings": {
+            "windowName": {
+                "name": "Settings"
+            },
+            "resolution": {
+                "title": "Maximum resolution",
+                "sidebar_title": "Max resolution",
+                "explanation_1": "Limits the maximum resolution this device is capable of rendering."
+            },
+            "keepSize": {
+                "title": "Keep window size",
+                "sidebar_title": "Keep size",
+                "explanation_1": "YouTube TV will reopen exactly as it was closed, restoring its size, screen position, and maximized state."
+            },
+            "dial": {
+                "title": "Connectivity",
+                "sidebar_title": "Connectivity",
+                "explanation_1": "Cast content from the YouTube app on your phone.",
+                "explanation_2": "Device name:"
+            },
+            "background": {
+                "title": "Background mode",
+                "sidebar_title": "Background",
+                "explanation_1": "YouTube TV will stay minimized and switch to full screen when a device connects."
+            }
+        }
+    },
+    "utils": {
+        "boolean_enabled_disabled": {
+            "true": "Enabled",
+            "false": "Disabled"
+        },
+        "yes_no_buttons": {
+            "yes": "Yes",
+            "no": "No"
+        }
+    }
+}

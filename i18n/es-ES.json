@@ -1,0 +1,56 @@
+{
+    "dialogs": {
+        "load_settings_corrupt": {
+            "title": "",
+            "message": "Error de lectura de configuración",
+            "detail": "Se ha producido un error al leer la configuración de YouTube TV.\nEsto puede deberse a una escrituras o manipulaciones incorrectas del fichero. Puede intentar corregirlo manualmente o bien restablecer los ajustes.\n¿Desea restablecer la configuración por defecto?",
+            "buttons": [ "Si", "No" ],
+            "cancelId": 1
+        },
+        "update_available": {
+            "title": "",
+            "message": "Actualización disponible",
+            "detail": "Existe una nueva versión disponible de YouTube TV.\n¿Deseas visitar el sitio de descargas?",
+            "buttons": [ "Si", "No volver a preguntar", "No" ],
+            "cancelId": 2
+        }
+    },
+    "renderer": {
+        "settings": {
+            "windowName": {
+                "name": "Configuración"
+            },
+            "resolution": {
+                "title": "Resolución máxima",
+                "sidebar_title": "Resolución máxima",
+                "explanation_1": "Limita la resolución máxima que es capaz de representar este dispositivo."
+            },
+            "keepSize": {
+                "title": "Mantener tamaño",
+                "sidebar_title": "Mantener tamaño",
+                "explanation_1": "YouTube TV volverá a brirse de la misma forma que se cerró, restaurando el tamaño que tenía, así como la posición en la pantalla y el estado maximizado."
+            },
+            "dial": {
+                "title": "Conectividad",
+                "sidebar_title": "Conectividad",
+                "explanation_1": "Transmite contenido desde la aplicación de YouTube de tu teléfono.",
+                "explanation_2": "Nombre de este dispositivo:"
+            },
+            "background": {
+                "title": "Segundo plano",
+                "sidebar_title": "Segundo plano",
+                "explanation_1": "YouTube TV se mantendrá minimizado y se pondrá a pantalla completa cuando algún dispositivo se conecte."
+            }
+        }
+    },
+    "utils": {
+        "boolean_enabled_disabled": {
+            "true": "Activado",
+            "false": "Desactivado"
+        },
+        "yes_no_buttons": {
+            "yes": "Si",
+            "no": "No"
+        }
+    }
+}
