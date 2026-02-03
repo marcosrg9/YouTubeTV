@@ -25,15 +25,15 @@ YouTube TV está disponible para Linux, Windows y macOS. Puede encontrar binario
 
 <table width="100px">
     <tr>
-        <th><img width="441" height="1">Plataforma<img width="441" height="1"></th>
-        <th><img width="441" height="1">Arquitectura<img width="441" height="1"></th>
-        <th><img width="441" height="1">Enlace<img width="441" height="1"></th>
+        <th><img width="441" height="1">Platform<img width="441" height="1"></th>
+        <th><img width="441" height="1">Architecture<img width="441" height="1"></th>
+        <th><img width="441" height="1">Link<img width="441" height="1"></th>
     </tr>
     <tr>
         <td rowspan="1">Windows</td>
         <td>x64/ARM64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV Setup 3.0.0.exe"><img src="https://img.shields.io/badge/Descargar-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
+        <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV.Setup.3.0.0.exe"><img src="https://img.shields.io/badge/Descargar-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
         </td>
     </tr>
     <!-- <tr>
@@ -46,42 +46,31 @@ YouTube TV está disponible para Linux, Windows y macOS. Puede encontrar binario
         <td rowspan="2">macOS</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0.dmg"><img src="https://img.shields.io/badge/Descargar-black?style=for-the-badge&logo=apple"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0.dmg"><img src="https://img.shields.io/badge/Descargar-black?style=for-the-badge&logo=apple"></a>
         </td>
     </tr>
     <tr>
         <td>Apple Silicon (ARM)</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-arm64.dmg"><img src="https://img.shields.io/badge/Descargar-black?style=for-the-badge&logo=apple"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-arm64.dmg"><img src="https://img.shields.io/badge/Descargar-black?style=for-the-badge&logo=apple"></a>
         </td>
     </tr>
     <tr>
         <td rowspan="1">Linux (Debian)</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-x64.deb"><img src="https://img.shields.io/badge/Descargar-A80030?style=for-the-badge&logo=debian"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-x64.deb"><img src="https://img.shields.io/badge/Descargar-A80030?style=for-the-badge&logo=debian"></a>
         </td>
     </tr>
-    <!-- <tr>
-        <td>ARMv7l (Ej. RPI4)</td>
-        <td align="center">
-            <a><img src="https://img.shields.io/badge/Descargar-A80030?style=for-the-badge&logo=debian"></a>
-        </td>
-    </tr> -->
     <tr>
         <td rowspan="1">Linux (RedHat)</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-x64.rpm"><img src="https://img.shields.io/badge/Descargar-ee0000?style=for-the-badge&logo=redhat"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-x64.rpm"><img src="https://img.shields.io/badge/Descargar-ee0000?style=for-the-badge&logo=redhat"></a>
         </td>
     </tr>
-    <!-- <tr>
-        <td>ARMv7l (Ej. RPI4)</td>
-        <td align="center">
-            <a><img src="https://img.shields.io/badge/Descargar-ee0000?style=for-the-badge&logo=redhat"></a>
-        </td>
-    </tr> -->
 </table>
+
 
 [Todas las builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
 

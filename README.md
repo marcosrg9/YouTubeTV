@@ -33,7 +33,7 @@ YouTube TV is available for Linux, Windows, and macOS. You can find precompiled 
         <td rowspan="1">Windows</td>
         <td>x64/ARM64</td>
         <td align="center">
-        <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV Setup 3.0.0.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
+        <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV.Setup.3.0.0.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
         </td>
     </tr>
     <!-- <tr>
@@ -46,30 +46,30 @@ YouTube TV is available for Linux, Windows, and macOS. You can find precompiled 
         <td rowspan="2">macOS</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
         </td>
     </tr>
     <tr>
         <td>Apple Silicon (ARM)</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-arm64.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-arm64.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
         </td>
     </tr>
     <tr>
         <td rowspan="1">Linux (Debian)</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-x64.deb"><img src="https://img.shields.io/badge/Download-A80030?style=for-the-badge&logo=debian"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-x64.deb"><img src="https://img.shields.io/badge/Download-A80030?style=for-the-badge&logo=debian"></a>
         </td>
     </tr>
     <tr>
         <td rowspan="1">Linux (RedHat)</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV-3.0.0-x64.rpm"><img src="https://img.shields.io/badge/Download-ee0000?style=for-the-badge&logo=redhat"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-x64.rpm"><img src="https://img.shields.io/badge/Download-ee0000?style=for-the-badge&logo=redhat"></a>
         </td>
     </tr>
-    </table>
+</table>
 
 [All builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
 
@@ -157,5 +157,6 @@ When I started developing this application, my intention was to use it on a Rasp
 
 The goal of this application is **for the user experience to be as faithful as possible to a solution that could be developed by Google**.\
 In version 3.0.0, an ad blocker was implemented solely to perform the dozens of tests I had to run without waiting for ads to finish, but I have disabled it in public builds, and it is only available in the development environment. Any developer who wishes to contribute will find a way to activate it.
+
 
 I understand the annoyance of ads—I am the first to say so and I am aware of it—but blocking them is not the purpose of this application. Therefore, from now on, I will reject all PRs and close proposals that involve ad blocking.
