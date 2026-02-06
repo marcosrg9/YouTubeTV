@@ -3,7 +3,7 @@
 
 # **YouTube TV**
 [![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v3.0.0/total.svg?color=blue&label=Downloads%20in%20v3.0.0)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v3.0.0)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v3.0.1/total.svg?color=blue&label=Downloads%20in%20v3.0.1)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v3.0.1)
 
 YouTube TV is an application that brings the TV version of YouTube to the desktop, acting just like a Chromecast or a Smart TV.
 
@@ -162,6 +162,7 @@ When I started developing this application, my intention was to use it on a Rasp
 
 The goal of this application is **for the user experience to be as faithful as possible to a solution that could be developed by Google**.\
 In version 3.0.0, an ad blocker was implemented solely to perform the dozens of tests I had to run without waiting for ads to finish, but I have disabled it in public builds, and it is only available in the development environment. Any developer who wishes to contribute will find a way to activate it.
+
 
 
 I understand the annoyance of ads—I am the first to say so and I am aware of it—but blocking them is not the purpose of this application. Therefore, from now on, I will reject all PRs and close proposals that involve ad blocking.
