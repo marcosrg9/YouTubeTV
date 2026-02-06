@@ -14,8 +14,13 @@ exports.default = async function(context) {
         return;
     }
 
-
-    const exec = execSync('python3 -m castlabs_evs.vmp sign-pkg ' + appOutDir);
-    console.log(exec.toString('utf-8'))
+    try {
+        const exec = execSync('python3 -m castlabs_evs.vmp sign-pkg ' + appOutDir);
+        console.log(exec.toString('utf-8'))
+    } catch(err) {
+        console.log('An error ocurred while signing the binary:')
+        console.log(err)
+        console.log('Proceeding to build the installer without signing...')
+    }
     
 }

@@ -11,6 +11,7 @@ import { app } from 'electron';
 
 import { DataModel } from '../models/data.interface';
 import { Data } from '../models/data.model';
+import main from '../main';
 
 export class Persistence {
 
@@ -86,10 +87,11 @@ export class Persistence {
 
     public async init(): Promise<void> {
 
-        const a = readdirSync(join(process.resourcesPath, 'data'));
-        console.log(a);
-        return copyFile(join(process.resourcesPath, 'data',  'persistence.placeholder.json'), this.datapath)
-        //return copyFile(join(__dirname, 'persistence.placeholder.json'), this.datapath)
+        const persistenceFile = main.DEVMODE
+            ? join(process.cwd(), 'data', 'persistence.placeholder.json')
+            : join(process.resourcesPath, 'data', 'persistence.placeholder.json');
+            
+        return copyFile(persistenceFile, this.datapath)
 
     }
 

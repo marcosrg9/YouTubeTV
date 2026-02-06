@@ -30,43 +30,43 @@ YouTube TV is available for Linux, Windows, and macOS. You can find precompiled 
         <th><img width="441" height="1">Link<img width="441" height="1"></th>
     </tr>
     <tr>
-        <td rowspan="1">Windows</td>
+        <td rowspan="2">Windows</td>
         <td>x64/ARM64</td>
         <td align="center">
-        <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV.Setup.3.0.0.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
+        <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV.Setup.3.0.1.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
         </td>
     </tr>
-    <!-- <tr>
+    <tr>
         <td>ARM</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube TV Setup 3.0.0-arm64.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV.Setup.3.0.1-arm64.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
         </td>
-    </tr> -->
+    </tr>
     <tr>
         <td rowspan="2">macOS</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
         </td>
     </tr>
     <tr>
         <td>Apple Silicon (ARM)</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-arm64.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1-arm64.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
         </td>
     </tr>
     <tr>
         <td rowspan="1">Linux (Debian)</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-x64.deb"><img src="https://img.shields.io/badge/Download-A80030?style=for-the-badge&logo=debian"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1-x64.deb"><img src="https://img.shields.io/badge/Download-A80030?style=for-the-badge&logo=debian"></a>
         </td>
     </tr>
     <tr>
         <td rowspan="1">Linux (RedHat)</td>
         <td>x64</td>
         <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.0/YouTube.TV-3.0.0-x64.rpm"><img src="https://img.shields.io/badge/Download-ee0000?style=for-the-badge&logo=redhat"></a>
+            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1-x64.rpm"><img src="https://img.shields.io/badge/Download-ee0000?style=for-the-badge&logo=redhat"></a>
         </td>
     </tr>
 </table>
@@ -112,7 +112,7 @@ Setting a maximum resolution can benefit the device if it lacks the hardware cap
 This can be useful for devices like a Raspberry Pi.
 
 <div align="center">
-<img src="./readme/es/resolution.png" width="400">
+<img src="./readme/en/resolution.png" width="400">
 </div>
 
 > **Note**: As of version 3.0.0, this setting does not seem to behave as expected. When this option was implemented, it was actually intended to "trick" YouTube into believing the device had a higher resolution capability to view higher quality content; later, this option was added as an additional limiting setting.<br>However, changes made in version 3.0.0 may have affected how YouTube determines this capability, resulting in video resolutions of up to 4K being obtained regardless.
@@ -123,7 +123,7 @@ YouTube TV can remember the window location and full-screen state.
 However, this default configuration might be uncomfortable for some users, so it can now be toggled on or off.
 
 <div align="center">
-<img src="./readme/es/keepsize.png" width="400">
+<img src="./readme/en/keepsize.png" width="400">
 </div>
 
 ### Casting
@@ -132,14 +132,19 @@ YouTube TV allows you to use your phone to send content using the YouTube app. I
 Check the Google guide for [more information](https://support.google.com/chromecast/answer/2995235?hl=es).
 
 <div align="center">
-<img src="./readme/es/cast.png" width="400">
+<img src="./readme/en/cast.png" width="400">
 </div>
 
 This option is enabled by default, but you can disable it if necessary.
 
 Additionally, you can add a custom name to recognize your device more easily when you want to cast content.
 
-## ⚡️ Changelog (3.0.0)
+## ⚡️ Changelog
+### Patch (3.0.1)
+- Fixed a persistence issue that prevented settings from initializing.
+- Fixed the application packaging to resolve an issue that prevented YouTube TV from installing on Windows ([#64](https://github.com/marcosrg9/YouTubeTV/issues/64)).
+- Corrected the application category on Linux systems.
+### 3.0.0
 - Successfully integrated a DRM system. [More info](/castlabs)
 - Content can finally be viewed up to 4K. Although an option for 8K exists, it does not seem to work properly.
 - The settings interface has been completely redesigned.

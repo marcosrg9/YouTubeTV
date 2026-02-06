@@ -1,16 +1,17 @@
 {
     "name": "youtube-tv",
     "productName": "YouTube TV",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Simple YouTube TV client for desktop based on electron.",
     "main": "main.js",
     "scripts": {
         "start": "tsc && electron main.js",
         "debug": "electron . --inspect",
-        "compile": "tsc",
-        "build": "npm run build:mac && npm run build:win && npm run build:linux",
+        "compile": "tsc && cd renderers/settings/static && tsc",
+        "build": "npm run build:mac && npm run build:winARM && build:winx64 && npm run build:linux",
         "build:mac": "electron-builder --mac --x64 --arm64",
-        "build:win": "electron-builder --win --x64 --arm64",
+        "build:winARM": "electron-builder --win --arm64",
+        "build:winx64": "electron-builder --win --x64",
         "build:linux": "electron-builder --linux --x64",
         "buildRetinaDMGBackground": "tiffutil -cathidpicheck background.png background@2x.png -out background.tiff"
     },
@@ -78,7 +79,7 @@
                 "rpm"
             ],
             "icon": "build/icon.icns",
-            "packageCategory": "Video"
+            "packageCategory": "AudioVideo"
         },
         "win": {
             "target": "NSIS",
