@@ -3,7 +3,7 @@
 
 # **YouTube TV**
 [![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Descargas%20totales)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v3.0.0/total.svg?color=blue&label=Descargas%20en%20la%20versión%203.0.0)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v3.0.0)
+[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v3.0.1/total.svg?color=blue&label=Descargas%20en%20la%20versión%203.0.1)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v3.0.1)
 
 YouTube TV es una aplicación que lleva la versión de YouTube para televisores a los escritorios, igual que Chromecast o un televisor inteligente.
 
