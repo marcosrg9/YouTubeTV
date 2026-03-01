@@ -28,7 +28,7 @@
         "@types/peer-dial": "0.0.1",
         "electron": "github:castlabs/electron-releases#v37.10.3+wvcus",
         "electron-builder": "^23.0.2",
-        "typescript": "^4.7.3"
+        "typescript": "^5.9.3"
     },
     "build": {
         "productName": "YouTube TV",
