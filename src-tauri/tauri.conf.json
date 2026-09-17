@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "youtube-tv",
+  "version": "0.1.0",
+  "identifier": "com.marcos.youtube-tv",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "YouTube TV",
+        "width": 1280,
+        "height": 720,
+        "url": "https://www.youtube.com/tv?",
+        "userAgent": "Mozilla/5.0 Cobalt/25 (Sony, PS4, Wired)"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

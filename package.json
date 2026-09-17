@@ -1,90 +1,15 @@
 {
-    "name": "youtube-tv",
-    "productName": "YouTube TV",
-    "version": "3.0.1",
-    "description": "Simple YouTube TV client for desktop based on electron.",
-    "main": "main.js",
-    "scripts": {
-        "start": "tsc && electron main.js",
-        "debug": "electron . --inspect",
-        "compile": "tsc && cd renderers/settings/static && tsc",
-        "build": "npm run build:mac && npm run build:winARM && build:winx64 && npm run build:linux",
-        "build:mac": "electron-builder --mac --x64 --arm64",
-        "build:winARM": "electron-builder --win --arm64",
-        "build:winx64": "electron-builder --win --x64",
-        "build:linux": "electron-builder --linux --x64",
-        "buildRetinaDMGBackground": "tiffutil -cathidpicheck background.png background@2x.png -out background.tiff"
-    },
-    "dependencies": {
-        "auto-launch": "^5.0.6",
-        "express": "^4.17.1",
-        "peer-dial": "0.0.8"
-    },
-    "devDependencies": {
-        "@ghostery/adblocker-electron": "^2.13.0",
-        "@types/auto-launch": "^5.0.5",
-        "@types/express": "^4.17.13",
-        "@types/node": "^18.7.14",
-        "@types/peer-dial": "0.0.1",
-        "electron": "github:castlabs/electron-releases#v37.10.3+wvcus",
-        "electron-builder": "^23.0.2",
-        "typescript": "^4.7.3"
-    },
-    "build": {
-        "productName": "YouTube TV",
-        "appId": "com.youtube.tv",
-        "asar": true,
-        "afterPack": "./build/hooks/castlabs-sign.js",
-        "directories": {
-            "output": "../YTV_Builds"
-        },
-        "extraResources": [
-            {
-                "from": "./data/persistence.placeholder.json",
-                "to": "./data/persistence.placeholder.json",
-                "filter": [ "**/*" ]
-            },
-            {
-                "from": "./i18n/",
-                "to": "./i18n/",
-                "filter": [ "**/*.json" ]
-            }
-        ],
-        "electronDownload": {
-            "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
-        },
-        "mac": {
-            "category": "public.app-category.entertainment",
-            "target": "dmg",
-            "icon": "build/youtube_bigsur_icon.icns"
-        },
-        "dmg": {
-            "contents": [
-                {
-                    "x": 207,
-                    "y": 253
-                },
-                {
-                    "x": 494,
-                    "y": 253,
-                    "type": "link",
-                    "path": "/Applications"
-                }
-            ],
-            "background": "build/background.tiff"
-        },
-        "linux": {
-            "target": [
-                "deb",
-                "rpm"
-            ],
-            "icon": "build/icon.icns",
-            "packageCategory": "AudioVideo"
-        },
-        "win": {
-            "target": "NSIS",
-            "icon": "build/icon.ico"
-        }
-    },
-    "author": "Marcos Rodríguez <marcosylrg@gmail.com>"
+  "name": "youtube-tv",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "build-x64": "tauri build --target x86_64-pc-windows-msvc",
+    "build-aarch64": "tauri build --target aarch64-pc-windows-msvc",
+    "build native": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
 }

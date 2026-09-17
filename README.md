@@ -1,168 +1,53 @@
-<div align="center">
-<img src="./build/icon.png" width=90px>
+# YouTube TV (versión tauri)
 
-# **YouTube TV**
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/total.svg?color=FF0000&label=Total%20Downloads)](https://github.com/marcosrg9/YouTubeTV/releases/)
-[![Downloads](https://img.shields.io/github/downloads/marcosrg9/YouTubeTV/v3.0.1/total.svg?color=blue&label=Downloads%20in%20v3.0.1)](https://github.com/marcosrg9/YouTubeTV/releases/tag/v3.0.1)
+YouTube TV está originalmente escrito en Typescript, usando el entorno de ejecución de Nodejs con el framework Electron. Esta pila requiere una capacidad de memoria RAM bastante alta, en su lugar se ha considerado la opción de usar tauri que aprovecha el motor webview nativo del sistema para optimizar estos recursos.
 
-YouTube TV is an application that brings the TV version of YouTube to the desktop, acting just like a Chromecast or a Smart TV.
+Adicionalmente, dado que el motor de renderizado ya viene incluído en el sistema operativo, el uso de una instancia independiente de chromium es innecesaria, lo que también implica un menor consumo de almacenamiento local en el equipo.
 
-<img src="./readme/en/main.png" width="600px">
+## Consideraciones
 
-</div><br>
+- La aplicación original usa [peer-dial](https://www.npmjs.com/package/peer-dial) para la conexión entre dispositivos móviles (o navegadores) con el cliente de YouTube TV. Esto permitía controlar remotamente la aplicación para reproducir contenido sin tener que buscarlo manualmente en esta.\
+Esto no es posible por el momento con tauri, ya que parece no existir ningún paquete similar en crate, se debería escribir una implementación manualmente, lo que conlleva un tiempo considerable, habría que estudiar el funcionamiento del protocolo DIAL.
+- Ya que el motor de renderizado lo aporta el sistema operativo, en principio parece no ser necesaria ninguna firma de stream para el DRM, esto permite deshacerse de electron-castlabs, sin embargo no se ha probado en macOS ni Linux, donde este último tenía la limitación por no encontrarse disponible.
 
-## 🌎 Languages
+## Compilación
 
-This readme is available in the following languages:
+Para compilar YouTube TV se ha dejado preparado algunos scripts, se puede localizar en el fichero ```package.json```.
 
-- 🇪🇸 [Spanish](./README.es-ES.md)
-- 🇺🇸 English
+Aparentemente se puede realizar compilaciones cruzadas, en mi caso personal, ahora uso un dispositivo Arm64 con Windows 11 y he logrado compilar para x64.
 
+[Este sitio](https://www.mobzystems.com/blog/tauri-20-cross-compilation/) contiene una pequeña guía bastante sencilla que me ha ayudado a preparar el entorno para realizar las compilaciones.
 
-## 📦 Downloads
+Resumidamente los pasos son los siguientes:
 
-YouTube TV is available for Linux, Windows, and macOS. You can find precompiled binaries for most platforms. If your platform is Linux on ARM, please refer to the note found after the download list.
+1. Comprobar si el paquete de la compilación objetivo está instalado: `rustup target list`
+2. Añadir un paquete: `rustup target add ...`
+3. Compilar para la plataforma y arquitectura instalada: `npm run tauri build -- -- --target ...`
 
-<table width="100px">
-    <tr>
-        <th><img width="441" height="1">Platform<img width="441" height="1"></th>
-        <th><img width="441" height="1">Architecture<img width="441" height="1"></th>
-        <th><img width="441" height="1">Link<img width="441" height="1"></th>
-    </tr>
-    <tr>
-        <td rowspan="2">Windows</td>
-        <td>x64/ARM64</td>
-        <td align="center">
-        <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV.Setup.3.0.1.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
-        </td>
-    </tr>
-    <tr>
-        <td>ARM</td>
-        <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV.Setup.3.0.1-arm64.exe"><img src="https://img.shields.io/badge/Download-0078D4?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3SwQmAQAADweu/aa1gQcF5CJkCNp+cMzOvXB/T3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB1kxpU3aQGVTepQdVNalB15zcudAHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlU3qUHVTWpQdZMaVN2kBlV3Zs4jNxQH6GnVUPRlAAAAAElFTkSuQmCC"></a>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="2">macOS</td>
-        <td>x64</td>
-        <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
-        </td>
-    </tr>
-    <tr>
-        <td>Apple Silicon (ARM)</td>
-        <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1-arm64.dmg"><img src="https://img.shields.io/badge/Download-black?style=for-the-badge&logo=apple"></a>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="1">Linux (Debian)</td>
-        <td>x64</td>
-        <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1-x64.deb"><img src="https://img.shields.io/badge/Download-A80030?style=for-the-badge&logo=debian"></a>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="1">Linux (RedHat)</td>
-        <td>x64</td>
-        <td align="center">
-            <a href="https://github.com/marcosrg9/YouTubeTV/releases/download/v3.0.1/YouTube.TV-3.0.1-x64.rpm"><img src="https://img.shields.io/badge/Download-ee0000?style=for-the-badge&logo=redhat"></a>
-        </td>
-    </tr>
-</table>
+Por ejemplo, en mi caso para realizar una compilación para arquitectura x64 sobre arm64:
 
-[All builds](https://github.com/marcosrg9/YouTubeTV/releases/latest)
+```
+rustup target add x86_64-pc-windows-msvc
+npm run tauri build -- -- --target x86_64-pc-windows-msvc
+```
+**NOTA:**
+Para añadir un nuevo script al `package.json`, se debe eliminar la parte `-- -- `, de lo contrario al usar `npm run` se producirá el siguiente error:
+```
 
-> [!NOTE]
-> 1. 32-bit versions are no longer distributed.
->
-> 2. **There is no support for ARM on Linux**. You can find more information at the following locations:
->       - [Chromium Website](https://issues.chromium.org/issues/438403374)
->       - [Castlabs Issue GitHub #198](https://github.com/castlabs/electron-releases/issues/198)
->       - [Castlabs Issue GitHub #146 (RPi)](https://github.com/castlabs/electron-releases/issues/146)
->
->       I will monitor the status with every build to check for support updates.
+Info Looking up installed tauri packages to check mismatched versions...
+error: unexpected argument '--target' found
 
-## ⌨️ Keyboard Shortcuts
+Usage: cargo.exe build [OPTIONS]
 
-- **Settings Window**: <kbd>Ctrl</kbd> + <kbd>S</kbd>
-- **Full Screen**: <kbd>Ctrl</kbd> + <kbd>F</kbd>.
-- **Toggle Cursor Visibility**: <kbd>Ctrl</kbd> + <kbd>A</kbd>.
+For more information, try '--help'.
+failed to build app: failed to build app
+       Error failed to build app: failed to build app
+```
 
-**For Developers**:
-- **Main Window DevTools**: <kbd>Ctrl</kbd> + <kbd>D</kbd>.
-- **Settings Window DevTools**: <kbd>Ctrl</kbd> + <kbd>⇧ Shift</kbd> + <kbd>D</kbd>.
-- **Show Hidden Options**: 
+En Windows 11 ARM, el binario x64 corre sin problemas, pero en x64, el binario ARM no puede ejecutarse.
 
-## 🔧 Configuration
+Como requisito previo, se debe instalar los paquetes de compilación de Visual Studio correspondientes a cada arquitectura.
 
-YouTube TV includes a set of preferences that you can adjust to your liking.\
-To open this window, press <kbd>Ctrl</kbd> + <kbd>S</kbd>.
-> [!NOTE]
-> You can navigate the settings using the arrow keys, just like in the main window.
-> - <kbd>↑</kbd>: Move to the option above.
-> - <kbd>↓</kbd>: Move to the option below.
-> - <kbd>←</kbd>: Return to the sidebar.
-> - <kbd>→</kbd>: Move to the first option of the current section.
-> <br><br>
+## Notas adicionales
 
-### Max Resolution:
-
-Setting a maximum resolution can benefit the device if it lacks the hardware capability to render high-quality video, but YouTube determines that it can play at a high resolution based on network speed.\
-This can be useful for devices like a Raspberry Pi.
-
-<div align="center">
-<img src="./readme/en/resolution.png" width="400">
-</div>
-
-> **Note**: As of version 3.0.0, this setting does not seem to behave as expected. When this option was implemented, it was actually intended to "trick" YouTube into believing the device had a higher resolution capability to view higher quality content; later, this option was added as an additional limiting setting.<br>However, changes made in version 3.0.0 may have affected how YouTube determines this capability, resulting in video resolutions of up to 4K being obtained regardless.
-
-### Keep Size:
-
-YouTube TV can remember the window location and full-screen state.
-However, this default configuration might be uncomfortable for some users, so it can now be toggled on or off.
-
-<div align="center">
-<img src="./readme/en/keepsize.png" width="400">
-</div>
-
-### Casting
-
-YouTube TV allows you to use your phone to send content using the YouTube app. It works exactly like YouTube on a Chromecast or a Smart TV with the YouTube app installed.\
-Check the Google guide for [more information](https://support.google.com/chromecast/answer/2995235?hl=es).
-
-<div align="center">
-<img src="./readme/en/cast.png" width="400">
-</div>
-
-This option is enabled by default, but you can disable it if necessary.
-
-Additionally, you can add a custom name to recognize your device more easily when you want to cast content.
-
-## ⚡️ Changelog
-### Patch (3.0.1)
-- Fixed a persistence issue that prevented settings from initializing.
-- Fixed the application packaging to resolve an issue that prevented YouTube TV from installing on Windows ([#64](https://github.com/marcosrg9/YouTubeTV/issues/64)).
-- Corrected the application category on Linux systems.
-### 3.0.0
-- Successfully integrated a DRM system. [More info](/castlabs)
-- Content can finally be viewed up to 4K. Although an option for 8K exists, it does not seem to work properly.
-- The settings interface has been completely redesigned.
-- A small alert system for newer versions has been added.
-- An internationalization system has been implemented. It is now easy to add new languages.
-- It is now possible to define a custom device name for casting content from a phone.
-- Dependencies have been updated.
-
-## Technical Debt
-- The settings renderer was reworked very quickly without considering the structure that might be implemented in the future. Therefore, adding new sections will be very complex. This is pending refactoring.
-
-## ⚠️ Note on Ad Blocking
-I have occasionally received proposals to add an ad blocker.\
-When I started developing this application, my intention was to use it on a Raspberry Pi solely for personal enjoyment. However, I kept pushing changes to GitHub, mainly to have something else in my portfolio for my professional profile, in addition to sharing something with the world.
-
-The goal of this application is **for the user experience to be as faithful as possible to a solution that could be developed by Google**.\
-In version 3.0.0, an ad blocker was implemented solely to perform the dozens of tests I had to run without waiting for ads to finish, but I have disabled it in public builds, and it is only available in the development environment. Any developer who wishes to contribute will find a way to activate it.
-
-
-
-I understand the annoyance of ads—I am the first to say so and I am aware of it—but blocking them is not the purpose of this application. Therefore, from now on, I will reject all PRs and close proposals that involve ad blocking.
+Esto es una prueba rápida y experimental, se trata de un primer "boceto" para comprobar las capacidades. La implementación es mínima y primitiva, únicamente funciona lo básico que es la reproducción del contenido tal y como lo hacía YouTube TV original en sus primeras versiones, no dispone de conexión remota con el protocolo DIAL, no está disponible la configuración adicional de la que disponía YouTube TV en las últimas versiones ni los scripts que se inyectaban para mejorar en cierta medida la experiencia de usuario.
